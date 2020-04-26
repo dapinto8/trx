@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16.828" viewBox="0 0 16 16.828">
+    <defs>
+        <style>
+            .prefix__cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px}
+        </style>
+    </defs>
+    <g id="prefix__arrow-right_1_" data-name="arrow-right (1)" transform="translate(-4 -3.586)">
+        <path id="prefix__Línea_1" d="M0 0L14 0" class="prefix__cls-1" data-name="Línea 1" transform="translate(5 12)"/>
+        <path id="prefix__Trazado_1" d="M12 5l7 7-7 7" class="prefix__cls-1" data-name="Trazado 1"/>
+    </g>
+</svg>
