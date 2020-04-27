@@ -1,0 +1,30 @@
+.Instagram {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background-color: $secondary;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+      margin-top: 200px;
+    }
+  }
+
+  @media(min-width: 960px) {
+    .container {
+      flex-direction: row;
+
+      .content {
+        max-width: 660px;
+      }
+
+      button {
+        margin: auto;
+      }
+    }
+  }
+}

@@ -2,9 +2,12 @@
 @import './variables';
 @import './spacing';
 @import './main';
+@import './texts';
+@import './buttons';
+@import './slider';
 
 
-* 
+*,
 *::before,
 *::after {
     -moz-box-sizing: border-box;

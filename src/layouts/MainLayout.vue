@@ -1,14 +1,14 @@
 <template>
-  <section class="main-layout">
+  <main class="MainLayout">
     <Header />
     <slot />
     <Footer />
-  </section>
+  </main>
 </template>
 
 <script>
-import Header from "~/components/Header";
-import Footer from "~/components/Footer";
+import Header from "~/components/Header/Header";
+import Footer from "~/components/Footer/Footer";
 
 export default {
   components: {
@@ -17,9 +17,3 @@ export default {
   }
 };
 </script>
-
-<style>
-.main-layout {
-  
-}
-</style>

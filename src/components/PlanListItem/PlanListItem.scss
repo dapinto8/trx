@@ -1,0 +1,56 @@
+.PlanListItem {
+  position: relative;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  max-width: 230px;
+  min-width: 230px;
+  min-height: 324px;
+  padding: 2rem 1rem 4rem;
+  margin-bottom: 25px;
+  text-align: center;
+  background-color: $white;
+
+  &:not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  .name {
+    max-width: 200px;
+    margin: auto;
+    color: $black;
+    font-size: 21px;
+    font-weight: 600;
+  }
+
+  .description {
+    margin: 1.5rem 0;
+    font-size: 14px;
+    color: $grey;
+  }
+
+  .price {
+    color: $black;
+    font-size: 37px;
+    font-weight: 800;
+  }
+
+  .next {
+    color: $grey2;
+    font-size: 32px;
+    font-weight: 600;
+  }
+
+  button {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: max-content;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 260px;
+    min-width: 260px;
+  }
+}

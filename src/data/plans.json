@@ -2,13 +2,13 @@
     {
         "id": 1,
         "name": "Programa de Inicio en TRX",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
         "price": "S/ 270"
     },
     {
         "id": 2,
         "name": "Programa avanzado en TRX",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
         "price": "S/ 580"
     }
 ]

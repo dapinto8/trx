@@ -26,19 +26,14 @@
     margin-left: auto;
 }
 
-/*@media (min-width: 576px) {
+@media (min-width: 390px) {
     .container {
-        max-width: 540px;
-    }
-}*/
-
-@media (min-width: 768px) {
-    .container {
-        max-width: 720px;
+        padding-right: 3rem;
+        padding-left: 3rem;
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
     .container {
         max-width: 960px;
     }
@@ -46,7 +41,7 @@
 
 @media (min-width: 1200px) {
     .container {
-        max-width: 1140px;
+        max-width: 1200px;
     }
 }
 
@@ -62,75 +57,15 @@
 }
 
 input {
-    height: 20px;
-    line-height: 20px;
+    height: 40px;
+    line-height: 40px;
     padding: 10px 16px;
     background-color: $background-light-grey;
-    color: $grey-text;
+    color: $black;
 
     &::placeholder {
         color: $grey-text;
     }
 }
 
-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40px;
-    line-height: 20px;
-    padding: 10px 24px;
-    background-color: $primary;
-    color: $black;
-    font-size: 13px;
-    font-weight: 600;
 
-    .icon {
-        &-left {
-            margin-right: 8px;
-        }
-        &-right {
-            margin-left: 8px;
-        }
-    }
-
-    &.secondary {
-        height: 50px;
-        background-color: $secondary;
-    }
-
-    &.grey {
-        height: 50px;
-        background-color: $background-dark-grey;
-    }
-}
-
-.title-section {
-    color: $secondary;
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.subtitle-section {
-    line-height: 1.3;
-    color: $black;
-    font-size: 29px;
-    font-weight: 800;
-}
-
-.title-section, .subtitle-section {
-    &.white {
-        color: $white;
-    }
-}
-
-@media (min-width: 1024px) {
-    .title-section {
-        font-size: 16px;
-    }
-
-    .subtitle-section {
-        font-size: 42px;
-    }
-}

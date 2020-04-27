@@ -5,9 +5,5 @@
     </section>
   </MainLayout>
 </template>
-<style lang="scss">
-.programs {
-  font-weight: 900;
-  font-size: 24px;
-}
+<style lang="scss" scoped>
 </style>

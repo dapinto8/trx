@@ -1,0 +1,20 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: $black;
+
+  .menu {
+    .menu-item {
+      width: 24px;
+      height: 2px;
+      background-color: $white;
+      border-radius: 4px;
+
+      &:not(:last-child) {
+        margin-bottom: 6px;
+      }
+    }
+  }
+}

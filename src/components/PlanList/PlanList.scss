@@ -1,0 +1,21 @@
+.PlanList {
+  background-image: url('~@/assets/images/membership.jpg');
+
+  .plans-list-items {
+    margin-top: 3rem;
+    padding: 0 0.75rem;;
+
+    .slick-track {
+
+      .slick-prev {
+        left: -32px;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .plans-list-items { 
+      padding: 0;
+    }
+  }
+}

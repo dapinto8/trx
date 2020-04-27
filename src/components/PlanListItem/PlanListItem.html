@@ -1,0 +1,17 @@
+<div class="PlanListItem">
+  <div v-if="name">
+    <p class="name">{{ name }}</p>
+    <p class="description">{{ description }}</p>
+    <p class="price">{{ price }}</p>
+  </div>
+  <div v-else>
+    <p class="next">
+      Más
+      <br /> Adelante
+    </p>
+  </div>
+  <button :class="name ? 'secondary' : 'grey'">
+    {{ name ? '¡Comprar ahora!' : '¡Proximamente!' }}
+    <g-image src="~/assets/icons/arrow-right.svg" alt="Más información" class="icon-right" />
+  </button>
+</div>

@@ -1,0 +1,129 @@
+.home {
+  .hero {
+    position: relative;
+    background-image: url('~@/assets/images/hero.jpg');
+
+    .hero-text {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 30vh;
+      color: $white;
+
+      h3 {
+        margin-bottom: 1rem;
+        line-height: 1.3;
+        font-size: 29px;
+        font-weight: 800;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+    .newsletter {
+      padding: 0;
+      background-color: $black;
+
+      .container {
+        background-color: $black;
+
+        h3 {
+          margin-bottom: 1rem;
+          font-size: 18px;
+          font-weight: 800;
+          color: $white;
+        }
+
+        .form {
+          display: flex;
+          align-items: center;
+
+          input {
+            width: 100%;
+            margin-right: 0.5rem;
+
+            &#name {
+              display: none;
+            }
+          }
+
+          button {
+            flex: 2;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .hero {
+      .hero-text {
+        h3 {
+          font-size: 62px;
+        }
+
+        p {
+          font-size: 16px;
+        }
+      }
+
+      .newsletter {
+        .container {
+
+          h3 {
+            font-size: 32px;
+          }
+
+          .form {
+            input {
+              margin-right: 1rem;
+
+              &#name {
+                max-width: 360px;
+                display: block;
+              }
+            }
+          }
+        }
+      }
+
+    }
+
+  }
+
+  @media (min-width: 1024px) {
+    .hero {
+      .hero-text {
+        min-height: 40vh;
+        padding-bottom: 10rem;
+      }
+
+      .newsletter {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        background-color: transparent;
+
+        .container {
+          position: relative;
+          z-index: 3;
+          padding-left: 4rem;
+          padding-right: 4rem;
+
+          .form {
+            button {
+              min-width: 260px;
+              height: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
