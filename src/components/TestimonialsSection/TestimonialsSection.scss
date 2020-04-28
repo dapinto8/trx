@@ -1,8 +1,9 @@
 .TestimonialsSection {
   position: relative;
-  background-color: $background-light;
-
+  
   .wrapper {
+    background-color: $background-light;
+
     .container {
 
       .titles {
@@ -85,6 +86,7 @@
     
     .wrapper {
       position: relative;
+      padding: 3rem 0;
 
       .container {
         .content {
