@@ -1,18 +1,20 @@
 <template src="./Home.html"></template>
 <style lang="scss" scoped src="./Home.scss"></style>
 <script>
-import ProgramsContent from "~/components/ProgramsContent/ProgramsContent";
+import ProgramsSection from "~/components/ProgramsSection/ProgramsSection";
 import PlansList from "~/components/PlanList/PlanList";
-import InstructorContent from "~/components/InstructorContent/InstructorContent";
-import Youtube from "~/components/Youtube/Youtube";
+import TestimonialsSection from "~/components/TestimonialsSection/TestimonialsSection";
+import InstructorSection from "~/components/InstructorSection/InstructorSection";
+import YoutubeSection from "~/components/YoutubeSection/YoutubeSection";
 
 export default {
   name: "Home",
   components: {
-    ProgramsContent,
+    ProgramsSection,
     PlansList,
-    InstructorContent,
-    Youtube
+    TestimonialsSection,
+    InstructorSection,
+    YoutubeSection
   }
 };
 </script>

@@ -1,71 +1,118 @@
-
-
 .d-none {
-    display: none !important;
+  display: none !important;
 }
 
 .d-inline-block {
-    display: inline-block !important;
+  display: inline-block !important;
 }
 
 .d-block {
-    display: block !important;
+  display: block !important;
 }
 
 .d-flex {
-    display: flex !important;
+  display: flex !important;
 }
 
 .container {
-    // width: 100%;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
-    margin-right: auto;
-    margin-left: auto;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 @media (min-width: 390px) {
-    .container {
-        padding-right: 3rem;
-        padding-left: 3rem;
-    }
+  .container {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
 }
 
 @media (min-width: 1024px) {
-    .container {
-        max-width: 960px;
-    }
+  .container {
+    max-width: 960px;
+  }
 }
 
 @media (min-width: 1200px) {
-    .container {
-        max-width: 1200px;
-    }
+  .container {
+    max-width: 1200px;
+  }
+}
+
+.not-container {
+  margin-right: -1.5rem;
+  margin-left: -1.5rem;
+}
+
+@media (min-width: 390px) {
+  .not-container {
+    margin-right: -3rem;
+    margin-left: -3rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .not-container {
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
 
 .background {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 
-    &.blend {
-        background-color: rgba($color: $black, $alpha: 0.4);
-        background-blend-mode: multiply;
+  &.blend {
+    background-color: rgba($color: $black, $alpha: 0.4);
+    background-blend-mode: multiply;
+  }
+
+  &.absolute {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    &.left {
+      left: 0;
     }
+
+    &.right {
+      right: 0;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $white;
 }
 
 input {
-    height: 40px;
-    line-height: 40px;
-    padding: 10px 16px;
-    background-color: $background-light-grey;
-    color: $black;
+  height: 40px;
+  line-height: 40px;
+  padding: 10px 16px;
+  background-color: $background-light-grey;
+  color: $black;
 
-    &::placeholder {
-        color: $grey-text;
-    }
+  &::placeholder {
+    color: $grey-text;
+  }
 }
 
+.play {
+  z-index: 9;
+  background-size: auto;
 
+  &.yellow {
+    background-image: url('~@/assets/icons/play-yellow.svg');
+  }
+
+  &.black {
+    background-image: url('~@/assets/icons/play-black.svg');
+  }
+}

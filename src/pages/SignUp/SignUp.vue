@@ -3,9 +3,4 @@
     <p>Sign up</p>
   </section>
 </template>
-<style lang="scss">
-.sign-up {
-  font-weight: 900;
-  font-size: 24px;
-}
-</style>
+<style lang="scss" scoped></style>

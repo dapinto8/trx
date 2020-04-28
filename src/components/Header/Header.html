@@ -1,19 +1,24 @@
 <header class="Header">
-  <div class="brand">
-    <g-link to="/">
-      <g-image src="~/assets/images/brand/logo@3x.png" width="150px" />
-    </g-link>
+  <div class="container">
+    <div class="brand">
+      <g-link to="/">
+        <g-image class="mobile" src="~/assets/images/brand/logo-mobile.png" width="120" />
+        <g-image class="desktop" src="~/assets/images/brand/logo-desktop.png" width="260" />
+      </g-link>
+    </div>
+    <div class="menu">
+      <div class="menu-item"></div>
+      <div class="menu-item"></div>
+      <div class="menu-item"></div>
+    </div>
+    <nav class="nav">
+      <g-link class="nav-link" to="/programs">Programa</g-link>
+      <g-link class="nav-link" to="/contact">Planes</g-link>
+      <g-link class="nav-link" to="/sign-in">Encuentranos</g-link>
+      <div class="nav-link yellow">
+        <g-link class="sign-in" to="/sign-in">Inicia Sesión</g-link>
+        <g-link class="sign-up" to="/sign-up">Registrate aquí</g-link>
+      </div>
+    </nav>
   </div>
-  <div class="menu">
-    <div class="menu-item"></div>
-    <div class="menu-item"></div>
-    <div class="menu-item"></div>
-  </div>
-  <nav class="nav d-none">
-    <g-link class="nav__link" to="/">Home</g-link>
-    <g-link class="nav__link" to="/programs">Programs</g-link>
-    <g-link class="nav__link" to="/contact">Contact</g-link>
-    <g-link class="nav__link" to="/sign-in">Sign in</g-link>
-    <g-link class="nav__link" to="/sign-up">Sign up</g-link>
-  </nav>
 </header>

@@ -1,16 +1,16 @@
 <template>
   <main-layout>
     <slot />
-    <Instagram />
+    <InstagramSection />
   </main-layout>
 </template>
 
 <script>
-import Instagram from "~/components/Instagram/Instagram";
+import InstagramSection from "~/components/InstagramSection/InstagramSection";
 
 export default {
   components: {
-    Instagram
+    InstagramSection
   }
 };
 </script>

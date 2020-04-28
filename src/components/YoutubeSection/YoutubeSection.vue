@@ -1,10 +1,10 @@
-<template src="./Youtube.html"></template>
-<style lang="scss" scoped src="./Youtube.scss"></style>
+<template src="./YoutubeSection.html"></template>
+<style lang="scss" scoped src="./YoutubeSection.scss"></style>
 <script>
 import VueSlickCarousel from "vue-slick-carousel";
 
 export default {
-  name: "Youtube",
+  name: "YoutubeSection",
   components: {
     VueSlickCarousel
   },

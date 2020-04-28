@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
+    <defs>
+        <style>
+            .prefix__cls-3{fill:#fff}
+        </style>
+    </defs>
+    <g id="prefix__Grupo_34" data-name="Grupo 34" transform="translate(-153 -692)">
+        <circle id="prefix__Elipse_45" cx="35" cy="35" r="35" data-name="Elipse 45" transform="translate(153 692)" style="fill:#ebdd21"/>
+        <g id="prefix__Grupo_13" data-name="Grupo 13" transform="translate(-24 57)" style="opacity:0">
+            <rect id="prefix__Rectángulo_308" width="6" height="22" class="prefix__cls-3" data-name="Rectángulo 308" rx="1" transform="translate(203 659)"/>
+            <rect id="prefix__Rectángulo_309" width="6" height="22" class="prefix__cls-3" data-name="Rectángulo 309" rx="1" transform="translate(215 659)"/>
+        </g>
+        <g id="prefix__baseline-play_arrow-24px" transform="translate(170.499 709.499)">
+            <path id="prefix__Trazado_697" d="M8 5v20.418l16.043-10.209z" data-name="Trazado 697" transform="translate(3.668 2.292)"/>
+            <path id="prefix__Trazado_698" d="M0 0h35v35H0z" data-name="Trazado 698" style="fill:none"/>
+        </g>
+    </g>
+</svg>
