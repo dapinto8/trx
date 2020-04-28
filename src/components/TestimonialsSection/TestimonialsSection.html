@@ -1,34 +1,37 @@
 <section class="TestimonialsSection">
-  <div class="container">
-    <div class="titles">
-      <h2 class="title-section">Testimonials</h2>
-      <h3 class="subtitle-section">
-        Encuentra la motivación y entrena ahora
-      </h3>
-    </div>
-    <div class="content not-container">
-      <div class="testimonials">
-        <VueSlickCarousel ref="slider" v-bind="settings" class="slider-custom">
-          <div v-for="(item, index) in [1,2,3,4]" :key="index" class="testimonial">
-            <div class="people">
-              <g-image src="~/assets/images/people.jpg" alt="John Doe" width="56" height="56"></g-image>
-              <div>
-                <p class="name">John Doe</p>
-                <p class="position">IT Engineer</p>
-              </div>
-            </div>
-            <p class="comment">
-              I'm very glad I had the opportunity to visit this hotel.
-              The stuff is very friendly and I will definetly
-              visit the hotel again next year.
-            </p>
-          </div>
-        </VueSlickCarousel>
+  <div class="wrapper">
+    <div class="container">
+      <div class="titles">
+        <h2 class="title-section">Testimonials</h2>
+        <h3 class="subtitle-section">
+          Encuentra la motivación y entrena ahora
+        </h3>
       </div>
-      <div class="background absolute right">
+      <div class="content not-container">
+        <div class="testimonials">
+          <VueSlickCarousel ref="slider" v-bind="settings" class="slider-custom">
+            <div v-for="(item, index) in [1,2,3,4]" :key="index" class="testimonial">
+              <div class="people">
+                <g-image src="~/assets/images/people.jpg" alt="John Doe" width="56" height="56"></g-image>
+                <div>
+                  <p class="name">John Doe</p>
+                  <p class="position">IT Engineer</p>
+                </div>
+              </div>
+              <p class="comment">
+                I'm very glad I had the opportunity to visit this hotel.
+                The stuff is very friendly and I will definetly
+                visit the hotel again next year.
+              </p>
+            </div>
+          </VueSlickCarousel>
+        </div>
+        <div class="background absolute right">
           <button @click="showPrev" class="slider-prev-custom"></button>
           <button @click="showNext" class="slider-next-custom"></button>
+        </div>
       </div>
     </div>
   </div>
+
 </section>

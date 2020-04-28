@@ -43,8 +43,31 @@
       background-color: $black;
 
       .nav-link {
+        position: relative;
         padding: 2rem 1rem;
         font-weight: 500;
+        transition: all ease-in 100ms;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: calc(50% + 10px);
+          left: 16px;
+          width: calc(100% - 2rem);
+          height: 2px;
+          transform-origin: 50%;
+          transform: scaleX(0);
+          background-color: $primary;
+          transition: all ease-in 200ms;
+        }
+
+        &:hover {
+          color: $primary;
+
+          &::before {
+            transform: scaleX(1);
+          }
+        }
       }
     }
   }
@@ -76,7 +99,6 @@
         padding-top: 0;
 
         .nav-link {
-          // padding: 1rem;
           font-size: 12px;
           text-transform: uppercase;
 
