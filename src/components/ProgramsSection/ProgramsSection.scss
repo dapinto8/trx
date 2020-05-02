@@ -53,10 +53,16 @@
   }
 
   @media (min-width: 1024px) {
+    &.y-padding {
+      .container {
+        padding-top: 10rem;
+      }
+    }
+
     .container {
       display: flex;
       justify-content: space-between;
-      padding-top: 10rem;
+      padding-top: 6rem;
       padding-bottom: 6rem;
 
       .content,

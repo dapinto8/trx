@@ -6,6 +6,7 @@
 import Home from "./Home/Home.vue";
 
 export default {
+  name: 'Index',
   components: {
     Home
   },
@@ -14,9 +15,3 @@ export default {
   }
 };
 </script>
-
-<style>
-.home-links a {
-  margin-right: 1rem;
-}
-</style>

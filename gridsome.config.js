@@ -14,6 +14,10 @@ module.exports = {
   plugins: [],
   css: {
     loaderOptions: {
+      /*css: {
+        modules: true,
+        localIdentName: 'style--[hash:base64:5]'
+      },*/
       scss: {
         prependData: `
           @import "~/assets/styles/_variables.scss";

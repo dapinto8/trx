@@ -1,109 +1,129 @@
-.home {
-  .hero {
+.Home {
+  &-hero {
     position: relative;
     background-image: url('~@/assets/images/hero.jpg');
 
-    .hero-text {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      min-height: 30vh;
-      color: $white;
-
-      h3 {
-        margin-bottom: 1rem;
-        line-height: 1.3;
-        font-size: 29px;
-        font-weight: 800;
-      }
-
-      p {
-        font-size: 14px;
-      }
-    }
-
-    .newsletter {
-      padding: 0;
-      background-color: $black;
-
-      .container {
-        background-color: $black;
+    &-slider {
+      &-item {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 30vh;
+        color: $white;
 
         h3 {
           margin-bottom: 1rem;
-          font-size: 18px;
+          line-height: 1.3;
+          font-size: 29px;
           font-weight: 800;
-          color: $white;
         }
 
-        .form {
-          display: flex;
-          align-items: center;
+        p {
+          font-size: 14px;
+        }
+      }
+    }
 
-          input {
-            width: 100%;
-            margin-right: 0.5rem;
+    &-newsletter {
+      padding: 0;
+      background-color: $black;
 
-            &#name {
-              display: none;
-            }
+      &-wrapper {
+        background-color: $black;
+      }
+
+      &-title {
+        margin-bottom: 1rem;
+        font-size: 18px;
+        font-weight: 800;
+        color: $white;
+      }
+
+      &-form {
+        display: flex;
+        align-items: center;
+
+        &-control {
+          margin-right: 0.5rem;
+
+          &:first-child {
+            display: none;
           }
-
-          button {
-            flex: 2;
-            font-weight: 600;
+         
+          &-field {
+            height: 40px;
           }
+          
+        }
+
+        &-button {
+          height: 40px;
+          line-height: 20px;
+          font-weight: 600;
+          background-color: $primary;
         }
       }
     }
   }
 
   @media (min-width: 768px) {
-    .hero {
-      .hero-text {
-        h3 {
-          font-size: 62px;
-        }
+    &-hero {
 
-        p {
-          font-size: 16px;
+      &-slider {
+        &-item {
+          h3 {
+            font-size: 62px;
+          }
+
+          p {
+            font-size: 16px;
+          }
         }
       }
 
-      .newsletter {
-        .container {
+      &-newsletter {
 
-          h3 {
-            font-size: 32px;
-          }
+        &-title {
+          font-size: 32px;
+        }
 
-          .form {
-            input {
-              margin-right: 1rem;
+        &-form {
 
-              &#name {
-                max-width: 360px;
-                display: block;
-              }
+          &-control {
+            margin-right: 1rem;
+
+            &:first-child {
+              display: block;
+              max-width: 320px;
+            }
+
+            &-field {
+              height: 50px;
             }
           }
+
+          &-button {
+            min-width: 260px;
+            height: 60px;
+          }
         }
       }
-
     }
-
   }
 
   @media (min-width: 1024px) {
-    .hero {
-      .hero-text {
-        min-height: 40vh;
-        padding-bottom: 10rem;
+    &-hero {
+
+      &-slider {
+        &-item {
+          min-height: 40vh;
+          padding-bottom: 10rem;
+        }
       }
 
-      .newsletter {
+      &-newsletter {
         position: absolute;
         top: 100%;
         left: 50%;
@@ -111,20 +131,14 @@
         width: 100%;
         background-color: transparent;
 
-        .container {
+        &-wrapper {
           position: relative;
           z-index: 3;
           padding-left: 5rem;
           padding-right: 5rem;
-
-          .form {
-            button {
-              min-width: 260px;
-              height: 50px;
-            }
-          }
         }
       }
     }
   }
 }
+

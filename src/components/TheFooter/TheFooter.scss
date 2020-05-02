@@ -1,0 +1,127 @@
+.TheFooter {
+  padding: 1.5rem;
+  text-align: center;
+  background-color: $background-dark;
+  color: $white;
+  font-weight: 500;
+
+  .container {
+    padding: 0;
+  }
+
+  &-box {
+
+    &.contact {
+      max-width: 200px;
+      margin: 0 auto;
+    }
+
+    &-info,
+    &.menu {
+      display: none;
+    }
+
+    &-title {
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    &-list {
+      &-item {
+        display: flex;
+        text-align: left;
+        margin-bottom: 1rem;
+
+        .link { color: $secondary; }
+        .icon { margin-right: 1rem; }
+        .text { font-size: 14px; }
+      }
+    }
+  }
+
+  &-copyright {
+    &-url {
+      margin: 1rem 0;
+      color: $secondary;
+    }
+
+    &-rights {
+      span {
+        color: $secondary;
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      display: flex;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
+      text-align: left;
+    }
+
+    &-box {
+
+      &.trainer {
+        flex: 2;
+      }
+
+      &.menu,
+      &.contact {
+        flex: 1;
+      }
+
+      &.contact {
+        max-width: none;
+      }
+
+      &-info,
+      &.menu {
+        display: block;
+      }
+
+      &-title {
+        margin-top: 0;
+      }
+
+      &-info {
+        max-width: 260px;
+
+        &-text-name {
+          font-size: 24px;
+          font-weight: 700;
+        }
+
+        &-text-description {
+          margin: 1.5rem 0;
+          color: $grey;
+          font-size: 14px;
+        }
+      }
+
+    }
+
+    &-copyright {
+
+      .container {
+        padding-top: 0;
+        padding-bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center
+      }
+
+      &-rights {
+        order: 1;
+      }
+
+      &-url {
+        order: 2;
+      }
+    }
+  }
+}

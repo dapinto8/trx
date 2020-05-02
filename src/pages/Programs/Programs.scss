@@ -1,0 +1,28 @@
+.Programs {
+  &-page-background {
+    &-list {
+      display: flex;
+      align-items: center;
+      margin-top: 0.5rem;
+
+      &-item {
+        padding: 0.5rem;
+        font-size: 14px;
+        font-weight: 500;
+        color: $white;
+
+        &.yellow {
+          background-color: $primary;
+          color: $black;
+        }
+      }
+
+      &-divider {
+        width: 2px;
+        height: 24px;
+        margin: 0 1rem;
+        background-color: $white;
+      }
+    }
+  }
+}

@@ -127,6 +127,24 @@
     }
   }
 
+  &.slider-photos {
+
+    .slick-prev,
+    .slick-next {
+     width: 60px;
+     height: 60px;
+    }
+  
+    .slick-prev {
+      transform: translate(20px, -50%);
+    }
+
+    .slick-next {
+      transform: translate(-20px, -50%);
+    }
+
+  }
+
   @media (min-width: 420px) {
 
     .slick-prev,
@@ -151,6 +169,15 @@
       &:hover,
       &:focus {
         background-color: $secondary;
+      }
+    }
+    
+    &.slider-photos {
+      .slick-prev {
+        transform: translate(80px, -50%);
+      }
+      .slick-next {
+        transform: translate(-80px, -50%);
       }
     }
   }

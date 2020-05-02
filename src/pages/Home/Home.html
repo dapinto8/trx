@@ -1,35 +1,44 @@
-<instagram-layout>
-  <section class="home">
-    <section class="hero background blend">
-      <div class="container hero-text">
-        <h3>
-          Entrenaen casa o
-          <br />desde donde estés
-        </h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur
-          <br />adipiscing elit, sed do eiusmod tempor
-          <br />incididunt ut labore et dolore magna aliqua.
-        </p>
+<social-layout>
+  <section class="Home">
+    <section class="Home-hero background blend">
+      <div class="Home-hero-slider">
+        <div class="Home-hero-slider-item container">
+          <h3>
+            Entrenaen casa o
+            <br />desde donde estés
+          </h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur
+            <br />adipiscing elit, sed do eiusmod tempor
+            <br />incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
       </div>
-      <div class="newsletter container">
-        <div class="container py-4">
-          <h3>Entérate de nuestras novedades</h3>
-          <div class="form">
-            <input type="name" name="name" id="name" placeholder="Nombre">
-            <input type="email" name="email" id="email" placeholder="Correo Electrónico">
-            <button>
+      <div class="Home-hero-newsletter container">
+        <div class="Home-hero-newsletter-wrapper xy-padding">
+          <h3 class="Home-hero-newsletter-title">Entérate de nuestras novedades</h3>
+          <form class="Home-hero-newsletter-form">
+            <div class="Home-hero-newsletter-form-control">
+              <label for="fullName">Nombre</label>
+              <input class="Home-hero-newsletter-form-control-field" 
+                type="text" name="fullName" id="fullName" placeholder="Nombre">
+            </div>
+            <div class="Home-hero-newsletter-form-control">
+              <label for="email">Correo electrónico</label>
+              <input class="Home-hero-newsletter-form-control-field" 
+                type="text" name="email" id="email" placeholder="Correo electrónico">
+            </div>
+            <button class="Home-hero-newsletter-form-button" type="submit">
               Suscribirse
               <g-image src="~/assets/icons/send.svg" alt="Suscribirse" class="icon-right" />
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </section>
-    <ProgramsSection />
-    <PlansList />
+    <ProgramsSection :isHomeView="true" />
+    <PlanList />
     <TestimonialsSection />
     <InstructorSection />
-    <YoutubeSection />
   </section>
-</instagram-layout>
+</social-layout>

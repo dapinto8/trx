@@ -1,19 +1,20 @@
 <template>
   <main class="MainLayout">
-    <Header />
+    <TheHeader />
     <slot />
-    <Footer />
+    <TheFooter />
   </main>
 </template>
 
 <script>
-import Header from "~/components/Header/Header";
-import Footer from "~/components/Footer/Footer";
+import TheHeader from "~/components/TheHeader/TheHeader";
+import TheFooter from "~/components/TheFooter/TheFooter";
 
 export default {
+  name: 'MainLayout',
   components: {
-    Header,
-    Footer
+    TheHeader,
+    TheFooter
   }
 };
 </script>

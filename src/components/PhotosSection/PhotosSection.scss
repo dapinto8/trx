@@ -1,0 +1,10 @@
+.PhotosSection {
+    &-slider {
+        height: 352px;
+        
+        &-item {
+            width: 352px;
+            height: 352px;
+        }
+    }
+}

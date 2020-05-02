@@ -1,0 +1,80 @@
+.Contact {
+
+  &-map {
+    margin-bottom: 3rem;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &-title {
+    margin-bottom: 2rem;
+  }
+
+  &-form {
+    &-control {
+      margin-bottom: 1rem;
+    }
+
+    &-button {
+      width: 100%;
+      max-width: 352px;
+      margin-top: 1rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 0;
+
+    &-item {
+      width: 100%;
+      max-width: 362px;
+      margin: 2rem auto;
+
+      &-name {
+        margin: 1rem 0;
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      &-text {
+        color: $grey;
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    &-form {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: repeat(4, 60px);
+      gap: 1rem;
+
+      &-control, &-button {
+        margin: 0;
+      }
+
+      &-button {
+        max-width: none;
+      }
+
+      &-control {
+        &:last-of-type {
+          grid-column: 1;
+          grid-row: 1 / -1;
+        }
+      }
+    }
+    
+  }
+}

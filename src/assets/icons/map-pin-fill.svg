@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="59" height="58" viewBox="0 0 59 58">
+    <defs>
+        <style>
+            .prefix__cls-2{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px}
+        </style>
+    </defs>
+    <g id="prefix__Grupo_88" data-name="Grupo 88" transform="translate(-1026.5 -1239)">
+        <ellipse id="prefix__Elipse_27" cx="29.5" cy="29" data-name="Elipse 27" rx="29.5" ry="29" transform="translate(1026.5 1239)" style="fill:#ebdd21"/>
+        <g id="prefix__map-pin" transform="translate(1046 1259)">
+            <path id="prefix__Trazado_27" d="M16.128 7.564c0 5.105-6.564 9.481-6.564 9.481S3 12.669 3 7.564a6.564 6.564 0 1 1 13.128 0z" class="prefix__cls-2" data-name="Trazado 27"/>
+            <circle id="prefix__Elipse_17" cx="2.5" cy="2.5" r="2.5" class="prefix__cls-2" data-name="Elipse 17" transform="translate(7 5.046)"/>
+        </g>
+    </g>
+</svg>

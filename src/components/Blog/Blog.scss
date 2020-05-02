@@ -1,0 +1,52 @@
+.Blog {
+  padding-top: 3rem;
+
+  &-section {
+    &:not(:last-child) {
+      margin-bottom: 6rem;
+    }
+
+    &-title {
+      margin-bottom: 3rem;
+    }
+
+    &-posts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 1rem;
+    }
+
+    &-post {
+      background-color: $background-light;
+
+      &-image {
+        width: 100%;
+      }
+
+      &-content {
+        max-width: 380px;
+        padding: 1.5rem 2rem;
+        margin: 0 auto;
+        text-align: center;
+
+        &-category {
+          color: $secondary;
+          font-size: 14px;
+          font-weight: 700;
+        }
+
+        &-title {
+          margin-bottom: 0.5rem;
+          font-size: 18px;
+          font-weight: 600;
+        }
+
+        &-description {
+          color: $grey;
+          font-size: 14px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

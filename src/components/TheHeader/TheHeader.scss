@@ -1,0 +1,126 @@
+.TheHeader {
+  background-color: $black;
+  padding: 1rem 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  &-brand {
+    &-image-desktop {
+      display: none;
+    }
+  }
+
+  &-menu {
+    &-item {
+      width: 24px;
+      height: 2px;
+      background-color: $white;
+      border-radius: 4px;
+
+      &:not(:last-child) {
+        margin-bottom: 6px;
+      }
+    }
+  }
+
+  &-nav {
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding-top: 4rem;
+    background-color: $black;
+
+    &-link {
+      position: relative;
+      padding: 2rem 1rem;
+      font-weight: 500;
+      transition: all ease-in 100ms;
+      
+      &.active--exact {
+        color: $primary;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: calc(50% + 10px);
+        left: 16px;
+        width: calc(100% - 2rem);
+        height: 2px;
+        transform-origin: 50%;
+        transform: scaleX(0);
+        background-color: $primary;
+        transition: all ease-in 200ms;
+      }
+
+      &:hover:not(.active--exact) {
+        color: $primary;
+
+        &::before {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+
+  @media(min-width: 1024px) {
+    padding: 0;
+
+    &-brand {
+      &-image-mobile { display: none; }
+      &-image-desktop { display: block; }
+    }
+
+    &-menu { display: none; }
+
+    &-nav {
+      position: static;
+      transform: translateX(0);
+      width: auto;
+      height: auto;
+      flex-direction: row;
+      padding-top: 0;
+
+      &-link {
+        font-size: 12px;
+        text-transform: uppercase;
+
+        &.yellow {
+          position: relative;
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+          text-align: center;
+          background-color: $primary;
+
+          .link {
+            color: $black;
+
+            &:last-child {
+              position: absolute;
+              left: 0;
+              bottom: 14px;
+              width: 100%;
+              font-size: 10px;
+              color: #817700;
+              text-transform: initial;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}

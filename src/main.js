@@ -3,7 +3,8 @@
 
 import DefaultLayout from '~/layouts/Default.vue'
 import MainLayout from '~/layouts/MainLayout.vue'
-import InstagramLayout from '~/layouts/InstagramLayout.vue'
+import SocialLayout from '~/layouts/SocialLayout.vue'
+import PhotosLayout from '~/layouts/PhotosLayout.vue'
 
 import '~/assets/styles/styles.scss'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css';
@@ -13,7 +14,8 @@ export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
   Vue.component('MainLayout', MainLayout)
-  Vue.component('InstagramLayout', InstagramLayout)
+  Vue.component('SocialLayout', SocialLayout)
+  Vue.component('PhotosLayout', PhotosLayout)
 
   // Head
   head.link.push({

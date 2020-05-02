@@ -1,6 +1,2 @@
-<template>
-  <section class="sign-up">
-    <p>Sign up</p>
-  </section>
-</template>
-<style lang="scss" scoped></style>
+<template src="./SignUp.html"></template>
+<style lang="scss" scoped src="./SignUp.scss"></style>

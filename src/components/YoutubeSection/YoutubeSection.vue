@@ -29,7 +29,29 @@ export default {
             }
           }
         ]
-      }
+      },
+      videos: [
+        {
+          image: require('@/assets/images/youtube_1@2x.jpg'),
+          title: 'Haz este Ejercicio por solo 7 Minutos en casa'
+        },
+        {
+          image: require('@/assets/images/youtube_2@2x.jpg'),
+          title: 'Rutina de ESPALDA con TRX'
+        },
+        {
+          image: require('@/assets/images/youtube_3@2x.jpg'),
+          title: 'Rutina de PIERNAS con bandas'
+        },
+        {
+          image: require('@/assets/images/youtube_1@2x.jpg'),
+          title: 'Haz este Ejercicio por solo 7 Minutos en casa'
+        },
+        {
+          image: require('@/assets/images/youtube_2@2x.jpg'),
+          title: 'Rutina de ESPALDA con TRX'
+        }
+      ]
     };
   }
 };

@@ -1,0 +1,18 @@
+<section class="PhotosSection">
+  <div class="PhotosSection-title">
+    <div class="container">
+      <h3 class="title-section">FOTOS</h3>
+      <p class="subtitle-section">
+        Descubre una nueva
+        <br /> versión de tu cuerpo
+      </p>
+    </div>
+  </div>
+  <div class="PhotosSection-slider">
+    <VueSlickCarousel v-bind="settings" class="slider-photos">
+      <div v-for="(image, index) in images" :key="index" class="PhotosSection-slider-item">
+        <g-image :src="image" alt="Photo" />
+      </div>
+    </VueSlickCarousel>
+  </div>
+</section>

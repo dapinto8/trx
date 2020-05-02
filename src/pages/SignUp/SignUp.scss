@@ -1,0 +1,69 @@
+.SignUp {
+
+  &-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 832px;
+    margin: 0 auto;
+    padding: 5rem 1.5rem 3rem;
+  }
+
+  &-form {
+    &-controls {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &-control {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    &-button {
+      width: 100%;
+      margin-top: 1rem;
+      margin-bottom: 3rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &-texts {
+    max-width: 424px;
+    margin: auto;
+    text-align: center;
+
+    &-text {
+      color: $grey;
+      font-size: 14px;
+      font-weight: 500;
+
+      &:first-child {
+        margin-bottom: 2rem;
+      }
+
+      span {
+        color: $black;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    &-form {
+      &-control, &-button {
+        max-width: 352px;
+      }
+
+      &-control {
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+
+      &-button {
+        margin-top: 3rem;
+      }
+    }
+  }
+}

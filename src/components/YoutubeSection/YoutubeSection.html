@@ -1,15 +1,20 @@
 <section class="YoutubeSection">
   <div class="container">
     <h2 class="title-section">Youtube</h2>
-    <h3 class="subtitle-section">Mira el contenido que tenemos para ti</h3>
-    <div class="video-list">
+    <h3 class="subtitle-section">
+      Mira el contenido 
+      <br /> que tenemos para ti
+    </h3>
+    <div class="YoutubeSection-video-list">
       <VueSlickCarousel v-bind="settings">
-        <div v-for="(item, index) in [1,2,3,4]" :key="index" class="video-list-item">
+        <div v-for="(video, index) in videos" :key="index" class="YoutubeSection-video-list-item">
           <div class="background absolute left play black"></div>
-          <div class="background"
-            v-bind:style="{ backgroundImage: 'url(' + require('@/assets/images/youtube_1@2x.jpg') + ')'  }">
+          <div class="background absolute left"
+            v-bind:style="{ backgroundImage: 'url(' + video.image + ')'  }">
           </div>
-          <p>Haz este Ejercicio por solo 7 Minutos en casa</p>
+          <p class="YoutubeSection-video-list-item-title">
+            {{ video.title }}
+          </p>
         </div>
       </VueSlickCarousel>
     </div>
