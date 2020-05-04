@@ -13,7 +13,7 @@ export default {
       settings: {
         arrows: true,
         dots: true,
-        infinite: false,
+        infinite: true,
         speed: 300,
         slidesToShow: 1
       },

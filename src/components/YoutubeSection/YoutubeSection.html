@@ -2,19 +2,21 @@
   <div class="container">
     <h2 class="title-section">Youtube</h2>
     <h3 class="subtitle-section">
-      Mira el contenido 
+      Mira el contenido
       <br /> que tenemos para ti
     </h3>
     <div class="YoutubeSection-video-list">
       <VueSlickCarousel v-bind="settings">
         <div v-for="(video, index) in videos" :key="index" class="YoutubeSection-video-list-item">
-          <div class="background absolute left play black"></div>
-          <div class="background absolute left"
-            v-bind:style="{ backgroundImage: 'url(' + video.image + ')'  }">
-          </div>
-          <p class="YoutubeSection-video-list-item-title">
-            {{ video.title }}
-          </p>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <div class="background absolute left play black"></div>
+            <div class="background absolute left"
+              v-bind:style="{ backgroundImage: 'url(' + video.image + ')'  }">
+            </div>
+            <p class="YoutubeSection-video-list-item-title">
+              {{ video.title }}
+            </p>
+          </a>
         </div>
       </VueSlickCarousel>
     </div>

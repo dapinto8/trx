@@ -10,7 +10,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        min-height: 30vh;
+        min-height: 40vh;
         color: $white;
 
         h3 {
@@ -118,7 +118,7 @@
 
       &-slider {
         &-item {
-          min-height: 40vh;
+          min-height: 60vh;
           padding-bottom: 10rem;
         }
       }

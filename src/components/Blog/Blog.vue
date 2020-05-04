@@ -8,7 +8,7 @@ export default {
       sections: [
         {
           title: "Rutinas",
-          description: "Read our newest blog post right away",
+          description: "Mira el detalle de nuestros programas",
           posts: [
             {
               image: require("@/assets/images/post-foods.jpg"),
@@ -56,7 +56,7 @@ export default {
         },
         {
           title: "Gratis",
-          description: "Read our newest blog post right away",
+          description: "Mira el detalle de nuestros programas",
           posts: [
             {
               image: require("@/assets/images/post-foods.jpg"),
