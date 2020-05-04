@@ -10,8 +10,10 @@
         font-size: 14px;
         font-weight: 500;
         color: $white;
+        cursor: pointer;
+        transition: all ease-in-out 100ms;
 
-        &.yellow {
+        &.yellow, &:hover {
           background-color: $primary;
           color: $black;
         }
