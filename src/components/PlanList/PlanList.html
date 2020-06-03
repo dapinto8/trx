@@ -2,13 +2,18 @@
   <div class="container">
     <h2 class="title-section">Membresía</h2>
     <h3 class="subtitle-section white">
-      Conoce más sobre 
-      <br /> nuestros programas online
+      Obtén el plan
+      <br> que más te conviene
     </h3>
     <div class="plans-list-items">
       <VueSlickCarousel v-bind="settings" class="slider-alt">
-        <PlansListItem v-for="plan in getPlans" :key="plan.id" :name="plan.name" :description="plan.description"
-          :price="plan.price" />
+        <PlansListItem 
+          v-for="plan in getPlans" 
+          :key="plan.id" 
+          :name="plan.name" 
+          :features="plan.features"
+          :condition="plan.condition" 
+        />
       </VueSlickCarousel>
     </div>
   </div>

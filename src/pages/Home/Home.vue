@@ -8,6 +8,18 @@ import InstructorSection from "~/components/InstructorSection/InstructorSection"
 
 export default {
   name: "Home",
+  metaInfo: {
+    meta: [
+      {
+        name: "description",
+        content: `Jesús Lezama, entrenador certificado en el IFBB (International Federationof Bodybuilding and Fitness) con 24 años de experiencia en el rubro. Capacitado en TRX Suspension Training, PilatesSuspension Method en Chile y Nueva York (USA).`
+      },
+      {
+        name: "keywords",
+        content: "Jesús Lezama, TRX Trainer, Ejercicio, Rutinas, Entranamiento"
+      }
+    ]
+  },
   components: {
     ProgramsSection,
     PlanList,

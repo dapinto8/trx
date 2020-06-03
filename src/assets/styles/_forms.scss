@@ -24,6 +24,10 @@ form {
     &::placeholder {
       color: $grey-text;
     }
+
+    &:focus {
+      border-color: $secondary;
+    }
   }
 
   textarea {

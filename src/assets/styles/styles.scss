@@ -1,5 +1,6 @@
 @import './reset';
 @import './variables';
+@import './animations';
 @import './spacing';
 @import './main';
 @import './forms';
@@ -23,20 +24,24 @@ body {
   background-color: $white;
 }
 
+
 ::selection {
   color: $white;
   background-color: $primary;
 }
 
+
+html {
+  scrollbar-color:  $black $primary;
+  scrollbar-width: thin;
+}
+
+
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 
   &-track {
     background-color: $black;
-
-    &:active {
-      background-color: $background-light;
-    }
   }
 
   &-thumb {

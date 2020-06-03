@@ -1,17 +1,23 @@
 <div class="PlanListItem">
-  <div v-if="name">
-    <p class="name">{{ name }}</p>
-    <p class="description">{{ description }}</p>
-    <p class="price">{{ price }}</p>
-  </div>
-  <div v-else>
-    <p class="next">
+  <template v-if="name">
+    <p class="name">
+      {{ name }}
+    </p>
+    <p v-for="(feature, index) in features" :key="index" class="feature">
+      {{ feature }}
+    </p>
+    <p class="condition">
+      {{ condition }}
+    </p>
+  </template>
+  <div v-else class="next">
+    <p>
       Más
       <br /> Adelante
     </p>
   </div>
   <button :class="name ? 'secondary' : 'grey'">
-    {{ name ? '¡Comprar ahora!' : '¡Proximamente!' }}
-    <g-image src="~/assets/icons/arrow-right.svg" alt="Más información" class="icon-right" />
+    {{ name ? 'Accede ahora' : '¡Proximamente!' }}
+    <g-image src="~/assets/icons/arrow-right.svg" alt="Obtener" class="icon-right" />
   </button>
 </div>

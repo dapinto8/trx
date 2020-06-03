@@ -8,7 +8,12 @@ export default {
       sections: [
         {
           title: "Rutinas",
-          description: "Mira el detalle de nuestros programas",
+          subtitle: "Encuentra la motivación y entrena ahora",
+          description: `
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam.
+          `,
           posts: [
             {
               image: require("@/assets/images/post-foods.jpg"),
@@ -49,33 +54,6 @@ export default {
               image: require("@/assets/images/post-foods.jpg"),
               category: "Food and life",
               title: "Succed in hotel business",
-              description:
-                "Fresh food directly from our restaurant ready coocked for you and you familly"
-            }
-          ]
-        },
-        {
-          title: "Gratis",
-          description: "Mira el detalle de nuestros programas",
-          posts: [
-            {
-              image: require("@/assets/images/post-foods.jpg"),
-              category: "Food and life",
-              title: "Succed in hotel business",
-              description:
-                "Fresh food directly from our restaurant ready coocked for you and you familly"
-            },
-            {
-              image: require("@/assets/images/post-cooking.jpg"),
-              category: "Cooking",
-              title: "Cooking delicious food",
-              description:
-                "Fresh food directly from our restaurant ready coocked for you and you familly"
-            },
-            {
-              image: require("@/assets/images/post-fruits.jpg"),
-              category: "Fruits",
-              title: "Getting fresh fruits",
               description:
                 "Fresh food directly from our restaurant ready coocked for you and you familly"
             }

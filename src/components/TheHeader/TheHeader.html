@@ -2,23 +2,27 @@
   <div class="container">
     <div class="TheHeader-brand">
       <g-link to="/">
-        <g-image class="TheHeader-brand-image-mobile" src="~/assets/images/brand/logo-mobile.png" width="120" />
-        <g-image class="TheHeader-brand-image-desktop" src="~/assets/images/brand/logo-desktop.png" width="260" />
+        <g-image class="TheHeader-brand-image-mobile" src="~/assets/images/brand/logo-mobile.png"
+          alt="Jesús Lezama TRX Functional Training" width="120" />
+        <g-image class="TheHeader-brand-image-desktop" src="~/assets/images/brand/logo-desktop.png"
+          alt="Jesús Lezama TRX Functional Training" width="260" />
       </g-link>
     </div>
-    <div class="TheHeader-menu">
+    <div @click="isShowing = !isShowing" class="TheHeader-menu">
       <div class="TheHeader-menu-item"></div>
       <div class="TheHeader-menu-item"></div>
       <div class="TheHeader-menu-item"></div>
     </div>
-    <nav class="TheHeader-nav">
-      <g-link class="TheHeader-nav-link" to="/programs">Programa</g-link>
-      <!--<g-link class="TheHeader-nav-link" to="/plans">Planes</g-link>-->
-      <g-link class="TheHeader-nav-link" to="/contact">Encuentranos</g-link>
-      <div class="TheHeader-nav-link yellow">
-        <g-link class="link" to="/sign-in">Inicia Sesión</g-link>
-        <g-link class="link" to="/sign-up">Registrate aquí</g-link>
-      </div>
-    </nav>
+    <transition name="slide">
+      <nav v-if="isShowing" class="TheHeader-nav">
+        <g-link @click="isShowing = !isShowing" class="TheHeader-nav-link" to="/programs">Programa</g-link>
+        <!--<g-link class="TheHeader-nav-link" to="/plans">Planes</g-link>-->
+        <g-link class="TheHeader-nav-link" to="/contact">Encuentranos</g-link>
+        <div class="TheHeader-nav-link-yellow">
+          <g-link class="TheHeader-nav-link link" to="/sign-in">Inicia Sesión</g-link>
+          <g-link class="TheHeader-nav-link link" to="/sign-up">Registrate aquí</g-link>
+        </div>
+      </nav>
+    </transition>
   </div>
 </header>

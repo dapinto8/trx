@@ -8,10 +8,10 @@ export default {
     name: {
       type: String
     },
-    description: {
-      type: String
+    features: {
+      type: Array
     },
-    price: {
+    condition: {
       type: String
     }
   }

@@ -3,7 +3,8 @@
     <div v-for="(section, index) in sections" :key="index" class="Blog-section">
       <div class="Blog-section-title">
         <h3 class="title-section">{{ section.title }}</h3>
-        <p class="subtitle-section">{{ section.description }}</p>
+        <p class="subtitle-section">{{ section.subtitle }}</p>
+        <p class="description-section">{{ section.description }}</p>
       </div>
       <div class="Blog-section-posts">
         <div v-for="(post, index) in section.posts" :key="index" class="Blog-section-post">

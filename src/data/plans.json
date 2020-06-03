@@ -1,14 +1,41 @@
-[
-    {
-        "id": 1,
-        "name": "Programa de Inicio en TRX",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
-        "price": "S/ 270"
-    },
-    {
-        "id": 2,
-        "name": "Programa avanzado en TRX",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
-        "price": "S/ 580"
-    }
+[{
+    "id": 1,
+    "name": "Rutinas online",
+    "features": [
+      "Rutinas online",
+      "Acceso 24/7",
+      "Rutinas especificas y variadas"
+    ],
+    "condition": "Previa coordinación con atención al cliente"
+  },
+  {
+    "id": 2,
+    "name": "Clases online",
+    "features": [
+      "Acceso a clases en videollamadas",
+      "Max 7 personas por sesión",
+      "Entrenamiento dirigido"
+    ],
+    "condition": ""
+  },
+  {
+    "id": 3,
+    "name": "Personal Trainer",
+    "features": [
+      "Acceso a clases en videollamadas",
+      "Max 7 personas por sesión",
+      "Entrenamiento dirigido"
+    ],
+    "condition": "Previa coordinación con atención al cliente"
+  },
+  {
+    "id": 4,
+    "name": "Gimnasio + Rutinas online",
+    "features": [
+      "Acceso al gimnasio",
+      "Acceso 24/7 a rutinas online",
+      "Rutinas especificas y variadas"
+    ],
+    "condition": ""
+  }
 ]

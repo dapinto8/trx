@@ -1,12 +1,13 @@
 .PlanListItem {
   position: relative;
   display: flex !important;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   max-width: 230px;
   min-width: 230px;
   min-height: 330px;
-  padding: 2rem 1rem 4rem;
+  padding: 2rem 1.5rem;
   margin-bottom: 25px;
   text-align: center;
   background-color: $white;
@@ -17,25 +18,26 @@
 
   .name {
     max-width: 200px;
-    margin: auto;
+    // line-height: 68px;
     color: $black;
     font-size: 21px;
     font-weight: 600;
   }
 
-  .description {
-    margin: 1.5rem 0;
+  .feature {
     font-size: 14px;
-    color: $grey;
+    color: $black;
+    letter-spacing: 0.7px;
   }
 
-  .price {
-    color: $black;
-    font-size: 37px;
-    font-weight: 800;
+  .condition {
+    font-size: 12px;
+    color: $grey4;
+    letter-spacing: 0.6px;
   }
 
   .next {
+    margin: auto;
     color: $grey2;
     font-size: 32px;
     font-weight: 600;
@@ -47,6 +49,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: max-content;
+    letter-spacing: 0.8px;
   }
 
   @media (min-width: 768px) {
