@@ -1,6 +1,7 @@
 <section class="Blog">
   <div class="container">
-    <div v-for="(section, index) in sections" :key="index" class="Blog-section">
+    <div v-for="(section, index) in sections" :key="index" 
+      :class="'Blog-section ' + section.type">
       <div class="Blog-section-title">
         <h3 class="title-section">{{ section.title }}</h3>
         <p class="subtitle-section">{{ section.subtitle }}</p>
@@ -14,8 +15,15 @@
             <p class="Blog-section-post-content-title">{{ post.title }}</p>
             <p class="Blog-section-post-content-description">{{ post.description }}</p>
           </div>
+          <div v-if="section.type === 'two'" class="Blog-section-post-arrow">
+            <g-image src="~/assets/icons/arrow-right.svg" alt="Go" class="icon-right" />
+          </div>
         </div>
       </div>
     </div>
+    <g-link to="/" class="g-link light">
+      Ver más de tus cursos
+      <g-image src="~/assets/icons/arrow-right.svg" alt="Ver más de tus cursos" class="icon-right" />
+    </g-link>
   </div>
 </section>

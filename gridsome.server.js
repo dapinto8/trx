@@ -24,6 +24,22 @@ module.exports = function (api) {
       path: '/sign-in',
       component: './src/pages/SignIn/SignIn.vue'
     })
+    createPage({
+      path: '/home',
+      component: './src/pages/UserHome/UserHome.vue'
+    })
+    createPage({
+      path: '/courses',
+      component: './src/pages/Courses/Courses.vue'
+    })
+    createPage({
+      path: '/profile',
+      component: './src/pages/Profile/Profile.vue'
+    })
+    createPage({
+      path: '/memberships',
+      component: './src/pages/Memberships/Memberships.vue'
+    })
   }),
   api.loadSource(({ addCollection }) => {
     // Use the Data Store API here: https://gridsome.org/docs/data-store-api/

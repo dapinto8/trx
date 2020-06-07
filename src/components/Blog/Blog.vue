@@ -3,9 +3,11 @@
 <script>
 export default {
   name: "Blog",
-  data() {
-    return {
-      sections: [
+  props: {
+    sections: {
+      type: Array,
+      required: true,
+      default: [
         {
           title: "Rutinas",
           subtitle: "Encuentra la motivación y entrena ahora",
@@ -60,7 +62,7 @@ export default {
           ]
         }
       ]
-    };
+    }
   }
 };
 </script>

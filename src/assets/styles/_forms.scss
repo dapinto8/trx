@@ -1,16 +1,24 @@
 form {
   width: 100%;
 
-  [class$="-control"] {
-    width: 100%;
+  &:not(.no-hide-labels) {
+    label {
+      display: block;
+      width: 0;
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
   }
 
   label {
     display: block;
-    width: 0;
-    height: 0;
-    opacity: 0;
-    overflow: hidden;
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+  }
+
+  [class$="-control"] {
+    width: 100%;
   }
 
   input, textarea {

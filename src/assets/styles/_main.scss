@@ -9,6 +9,43 @@ a {
   color: $white;
 }
 
+.container {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.not-container {
+  margin-right: -1.5rem;
+  margin-left: -1.5rem;
+}
+
+.page-background {
+  background-image: url('~@/assets/images/page-background.jpg');
+
+  &.only-desktop {
+    display: none;
+  }
+
+  &.alt {
+    background-image: url('~@/assets/images/page-background-alt.jpg');
+  }
+  
+  &-title {
+    color: $white;
+    font-size: 29px;
+    font-weight: 800;
+  }
+
+  &-link {
+    font-weight: 500;
+  }
+
+}
+
 .background {
   background-size: cover;
   background-repeat: no-repeat;
@@ -35,6 +72,13 @@ a {
   }
 }
 
+.xy-padding {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
 .play {
   z-index: 9;
   background-size: auto;
@@ -46,42 +90,6 @@ a {
   &.black {
     background-image: url('~@/assets/icons/play-black.svg');
   }
-}
-
-.container {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.not-container {
-  margin-right: -1.5rem;
-  margin-left: -1.5rem;
-}
-
-.page-background {
-  background-image: url('~@/assets/images/page-background.jpg');
-
-  &.alt {
-    background-image: url('~@/assets/images/page-background-alt.jpg');
-  }
-  
-  &-title {
-    color: $white;
-    font-size: 29px;
-    font-weight: 800;
-  }
-
-}
-
-.xy-padding {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
 }
 
 @media (min-width: 480px) {
@@ -118,6 +126,12 @@ a {
   .not-container {
     margin-right: 0;
     margin-left: 0;
+  }
+
+  .page-background {
+    &.only-desktop {
+      display: block;
+    }
   }
 }
 

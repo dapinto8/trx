@@ -1,0 +1,76 @@
+<main-layout>
+  <section class="Memberships">
+    <div class="page-background background only-desktop">
+      <div class="container">
+        <h1 class="page-background-title">Membresía</h1>
+        <g-link to="/home" class="page-background-link">
+          <g-image src="~/assets/icons/arrow-left.svg" alt="Volver" class="icon-left" />
+          Inicio
+        </g-link>
+      </div>
+    </div>
+    <UserNav />
+    <div class="container">
+      <div class="Memberships-title">
+        Pago
+      </div>
+      <div class="Memberships-purchase">
+        <div class="Memberships-purchase-plan">
+          <g-image class="Memberships-purchase-plan-image" src="~/assets/images/post-foods.jpg" alt="Clases Online"></g-image>
+          <div  class="Memberships-purchase-plan-content">
+            <p class="Memberships-purchase-plan-name">Zoom Trainning</p>
+            <p class="Memberships-purchase-plan-feature">- Acceso a clases en videollamadas</p>
+            <p class="Memberships-purchase-plan-feature">- Max 7 personas por sesión</p>
+            <p class="Memberships-purchase-plan-feature">- Entrenamiento dirigido</p>
+          </div>
+          <button type="submit" class="Memberships-purchase-plan-button">
+            Añade otro plan
+            <g-image src="~/assets/icons/arrow-right.svg" alt="Comprar ahora" class="icon-right" />
+          </button>
+        </div>
+        <div class="Memberships-purchase-resume">
+          <p>Tu compra:</p>
+          <p class="Memberships-purchase-resume-name">Clases online</p>
+          <form class="Memberships-coupon-form no-hide-labels">
+            <div class="Memberships-coupon-form-control">
+              <label for="coupon">Código Cupón</label>
+              <input type="text" name="coupon" id="coupon" placeholder="">
+            </div>
+          </form>
+          <p>
+            Clases online S/ 300
+          </p>
+          <p class="Memberships-purchase-resume-discount">
+            Descuento cupón S/ 25
+          </p>
+          <p class="Memberships-purchase-resume-total">
+            Total S/ 275
+          </p>
+          <button type="submit" class="Memberships-purchase-resume-button">
+            Comprar ahora
+            <g-image src="~/assets/icons/arrow-right.svg" alt="Editar" class="icon-right" />
+          </button>
+        </div>
+      </div>
+      <div class="Memberships-divider"></div>
+      <div class="Memberships-title">
+        Paga tu membresía anual y consigue 30% de descuento 
+      </div>
+      <div class="Memberships-purchase annual">
+        <div class="Memberships-purchase-plan">
+          <g-image class="Memberships-purchase-plan-image" src="~/assets/images/post-foods.jpg" alt="Clases Online"></g-image>
+          <div  class="Memberships-purchase-plan-content">
+            <p class="Memberships-purchase-plan-name">Gimnasio + Rutinas online</p>
+            <p class="Memberships-purchase-plan-feature black">- Acceso al gimnasio</p>
+            <p class="Memberships-purchase-plan-feature black">- Acceso 24/7 a rutinas online</p>
+            <p class="Memberships-purchase-plan-feature black">- Rutinas especificas y variadas</p>
+          </div>
+          <button type="submit" class="Memberships-purchase-plan-button">
+            Comprar: S/ 4,200
+            <g-image src="~/assets/icons/arrow-right.svg" alt="Comprar ahora" class="icon-right" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main-layout>

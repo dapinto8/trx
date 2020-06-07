@@ -1,0 +1,91 @@
+.UserNav {
+
+  .container {
+    display: flex;
+    padding: 0;
+  }
+
+  .profile {
+    flex-direction: column;
+
+    .desktop {
+      display: none;
+    }
+
+    .photo {
+      position: relative;
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+
+      .badge {
+        position: absolute;
+        top: 0;
+        left: calc(100% - 10px);
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        border-radius: 50%;
+        background-color: $red;
+        color: $white;
+        font-size: 10px;
+      }
+  
+    }
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  &-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    background-color: $primary;
+    color: $black;
+    font-size: 16px;
+    font-weight: 500;
+
+    &:not(:last-child) {
+      border-right: 1px solid $dark-green;
+    }
+  }
+
+  @media(min-width: 1024px) {
+    .container {
+      padding-right: 3rem;
+      padding-left: 3rem;
+      margin-left: auto;
+      margin-right: auto;
+
+      .profile {
+        .desktop {
+          display: block;
+        }
+        p, .photo {
+          display: none;
+        }
+        span {
+          font-weight: 400;
+        }
+      }
+    }
+
+    &-link {
+      &:not(:last-child) {
+        border-right: none;
+      }
+      &.active--exact {
+        background-color: $dark-green;
+        color: $white;
+      }
+    }
+  }
+}

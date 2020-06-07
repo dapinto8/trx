@@ -27,7 +27,6 @@ export default {
     },
     buttonText: {
       type: String,
-      required: true,
       default: "Más información"
     },
     isHomeView: {

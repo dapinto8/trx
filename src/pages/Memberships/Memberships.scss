@@ -1,0 +1,139 @@
+.Memberships {
+
+  &-title {
+    margin-bottom: 3rem;
+    font-size: 36px;
+    font-weight: 700;
+  }
+
+  &-coupon-form {
+    &-control {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &-divider {
+    height: 1px;
+    margin: 2rem 0;
+    background-color: $grey2;
+  }
+
+  &-purchase {
+    display: flex;
+    flex-direction: column;
+
+    &-plan {
+      flex: 2;
+      display: flex;
+      flex-wrap: wrap;
+      // align-items: flex-start;
+      margin-bottom: 1rem;
+
+      &-image {
+        width: 100%;
+      }
+      &-content {
+        padding: 1rem;
+      }
+      &-name {
+        margin-bottom: 1rem;
+        font-size: 20px;
+        font-weight: 600;
+      }
+      &-feature {
+        margin-bottom: 0.5rem;
+        color: $grey;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      &-button {
+        width: 100%;
+        background-color: $grey3;
+      }
+    }
+
+    &.annual {
+      .Memberships-purchase {
+        &-plan {
+          align-items: center;
+
+          &-feature {
+            color: $black;
+          }
+          &-button {
+            width: 100%;
+            font-size: 18px;
+            font-weight: 600;
+            background-color: $primary
+          }
+        }
+      }
+    }
+
+    &-resume {
+      p {
+        margin-bottom: 1rem;
+        color: $black;
+      }
+      &-name {
+        font-size: 18px;
+        font-weight: 600;
+      }
+      &-total {
+        font-size: 20px;
+        font-weight: 700;
+      }
+      &-button {
+        width: 100%;
+        background-color: $primary;
+      }
+    }
+  }
+
+  @media(min-width: 768px) {
+    &-purchase {
+      &-plan {
+        &-image {
+          max-width: 40%;
+        }
+      }
+    }
+  }
+
+  @media(min-width: 1024px) {
+    &-purchase {
+      flex-direction: row;
+
+      &-plan {
+        &-image {
+          max-width: 300px;
+        }
+        &-content {
+          padding: 1.5rem 2rem;
+        }
+        &-name {
+          font-size: 24px;
+        }
+        &-feature {
+          font-size: 14px;
+        }
+        &-button {
+          justify-content: flex-start;
+          background-color: $white;
+        }
+      }
+
+      &.annual {
+        .Memberships-purchase {
+          &-plan {
+            align-items: center;
+  
+            &-button {
+              width: max-content;
+            }
+          }
+        }
+      }
+    }
+  }
+}

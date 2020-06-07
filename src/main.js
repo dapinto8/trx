@@ -5,6 +5,7 @@ import DefaultLayout from '~/layouts/Default.vue'
 import MainLayout from '~/layouts/MainLayout.vue'
 import SocialLayout from '~/layouts/SocialLayout.vue'
 import PhotosLayout from '~/layouts/PhotosLayout.vue'
+import InstagramLayout from '~/layouts/InstagramLayout.vue'
 
 import '~/assets/styles/styles.scss'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css';
@@ -16,6 +17,7 @@ export default function (Vue, { router, head, isClient }) {
   Vue.component('MainLayout', MainLayout)
   Vue.component('SocialLayout', SocialLayout)
   Vue.component('PhotosLayout', PhotosLayout)
+  Vue.component('InstagramLayout', InstagramLayout)
 
   // Font
   head.link.push({

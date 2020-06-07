@@ -1,0 +1,15 @@
+<main-layout>
+  <section class="Courses">
+    <div class="page-background background only-desktop">
+      <div class="container">
+        <h1 class="page-background-title">Mis Cursos</h1>
+        <g-link to="/home" class="page-background-link">
+          <g-image src="~/assets/icons/arrow-left.svg" alt="Volver" class="icon-left" />
+          Inicio
+        </g-link>
+      </div>
+    </div>
+    <UserNav />
+    <Blog :sections="courses" />
+  </section>
+</main-layout>

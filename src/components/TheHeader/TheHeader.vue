@@ -5,13 +5,15 @@ export default {
   name: "TheHeader",
   data() {
     return {
-      isShowing: true
+      isShowing: false
     };
   },
   methods: {
     checkViewSize() {
       if (window.innerWidth >= 1024) {
         this.isShowing = true;
+      } else {
+        this.isShowing = false;
       }
     }
   },

@@ -3,7 +3,7 @@
 
   &-section {
     &:not(:last-child) {
-      margin-bottom: 6rem;
+      margin-bottom: 2rem;
     }
 
     &-title {
@@ -48,6 +48,101 @@
           font-weight: 500;
         }
       }
+
+      &-arrow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        background-color: $primary;
+      }
     }
   }
+
+  .two {
+    .Blog {
+      &-section {
+        &-post {
+          display: flex;
+
+          &-image {
+            width: 40%;
+          }
+  
+          &-content {
+            width: 100%;
+            max-width: none;
+            padding: 0.75rem;
+            text-align: left;
+
+            &-category {
+              font-size: 12px;
+            }
+
+            &-title {
+              font-size: 14px;
+            }
+
+            &-description {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media(min-width: 520px) {
+    .two {
+      .Blog {
+        &-section {
+
+          &-posts {
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+          }
+
+          &-post {
+            &-content {
+              width: 100%;
+              padding: 1rem;
+              text-align: left;
+  
+              &-category {
+                font-size: 12px;
+              }
+              &-title {
+                font-size: 14px;
+              }
+              &-description {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media(min-width: 1024px) {
+    .two {
+      .Blog {
+        &-section {
+          &-post {
+            &-image {
+              width: 40%;
+            }
+            &-content {
+              &-category {
+                font-size: 14px;
+              }
+              &-title {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
 }
