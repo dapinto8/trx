@@ -21,14 +21,47 @@
     <ProgramsSection 
       :title="'ZOOM TRAINNING'"
       :subtitle="'Entrenamiento dirigido con horarios flexibles'"
+      :benefits="[
+        'Ingreso a videollamadas  del entrenamiento',
+        'Entrenamiento dirigido durante la sesiones',
+        'Capacidad limitada por sesión',
+        'Horarios flexibles'
+      ]"
       :buttonText="'Accede ahora'"
     />
-    <PlanList />
+    <PlanList
+      :title="'Programas'"
+      :subtitle="'Obtén el plan que más te conviene'"
+      :plans="plans"
+    />
     <Blog />
     <ProgramsSection 
       :title="'PERSONAL TRAINNING'"
-      :subtitle="'Alcanza tus objetivos con la mejor ayuda'"
+      :subtitle="'Alcanza tu objetivo con el mejor resultado'"
+      :description="`
+        Un programa de alto nivel de resultados, 
+        transformaciones físicas efectivas dependiendo del
+        objetivo que se desee obtener
+      `"
+      :benefits="[
+        'Entrenamiento personalizado y a tu medida',
+        'Sesiones completamente dirigidas',
+        'Horarios flexibles',
+        'Resultados comprobados'
+      ]"
       :buttonText="'Accede ahora'"
+    />
+    <TestimonialsSection
+      :title="'Gimnasio + Rutinas Online'"
+      :subtitle="'El mejor lugar para tus entrenamientos'"
+      :description="'Un programa de alto nivel de resultados, transformaciones físicas efectivas dependiendo del objetivo que se desee obtener'"
+      :features="[
+        'Asesoría especializada',
+        'Las mejores instalaciones y implementos',
+        'Zona centrica y accesible',
+        'Horarios flexibles',
+        'Acceso a la plataforma de entrenamiento'
+      ]"
     />
   </section>
 </social-layout>

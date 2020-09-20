@@ -92,6 +92,12 @@ a {
   }
 }
 
+.list {
+  list-style: disc;
+  margin-left: 1.25rem;
+  margin-bottom: 1rem;
+}
+
 @media (min-width: 480px) {
   .container {
     padding-right: 3rem;
@@ -138,6 +144,12 @@ a {
 @media (min-width: 1200px) {
   .container {
     max-width: 1200px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1340px;
   }
 }
 

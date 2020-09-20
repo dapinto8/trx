@@ -3,6 +3,10 @@
     position: relative;
     background-image: url('~@/assets/images/hero.jpg');
 
+    .slick-slide .slick-active .slick-current {
+      justify-content: flex-start;
+    }
+
     &-slider {
       &-item {
         position: relative;
@@ -21,14 +25,32 @@
         }
 
         p {
+          max-width: 420px;
           font-size: 14px;
         }
       }
     }
 
     &-newsletter {
+      position: relative;
       padding: 0;
       background-color: $black;
+
+      .slider-buttons {
+        position: absolute;
+        bottom: 100%;
+        right: 0;
+
+        .slider-prev-custom {
+          left: auto;
+          background-color: $black;
+          background-image: url('~@/assets/icons/arrow-left.svg');
+        }
+        .slider-next-custom {
+          left: auto;
+          background-color: $primary;
+        }
+      }
 
       &-wrapper {
         background-color: $black;

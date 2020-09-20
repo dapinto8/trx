@@ -8,9 +8,14 @@
         <h3 class="subtitle-section">
           {{ subtitle }}
         </h3>
-        <p class="description dark">
+        <p class="description dark" v-html="description">
           {{ description }}
         </p>
+        <ul v-if="benefits" class="list">
+          <li v-for="(benefit, index) in benefits" :key="index">
+            {{ benefit }}
+          </li>
+        </ul>
         <button class="secondary">
           {{ buttonText }}
           <g-image src="~/assets/icons/arrow-right.svg" alt="Más información" class="icon-right" />

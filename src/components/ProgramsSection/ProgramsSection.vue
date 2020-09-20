@@ -21,6 +21,10 @@ export default {
         podrás llegar a la mejor versión de tu cuerpo.
       `
     },
+    benefits: {
+      type: Array,
+      required: false
+    },
     subtitle: {
       type: String,
       required: true

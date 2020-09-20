@@ -1,18 +1,23 @@
 <social-layout>
   <section class="Home">
     <section class="Home-hero background blend">
-      <div class="Home-hero-slider">
-        <div class="Home-hero-slider-item container">
-          <h3>
-            #QuédateEnCasa
-          </h3>
-          <p>
-            Entrena con nosotros desde donde
-            <br /> estés y en el horario que desees
-          </p>
+      <VueSlickCarousel ref="slider" v-bind="settings" class="home-slider">
+        <div v-for="(slider, index) in sliders" :key="index" class="Home-hero-slider">
+          <div class="Home-hero-slider-item container">
+            <h3>
+              {{ slider.title }}
+            </h3>
+            <p>
+              {{ slider.description }}
+            </p>
+          </div>
         </div>
-      </div>
+      </VueSlickCarousel>
       <div class="Home-hero-newsletter container">
+        <div class="slider-buttons">
+          <button @click="showPrev" class="slider-prev-custom"></button>
+          <button @click="showNext" class="slider-next-custom"></button>
+        </div>
         <div class="Home-hero-newsletter-wrapper xy-padding">
           <h3 class="Home-hero-newsletter-title">Entérate de nuestras novedades</h3>
           <form class="Home-hero-newsletter-form">
@@ -39,8 +44,16 @@
       :title="'ZOOM TRAINNING'"
       :subtitle="'Entrenamiento dirigido con horarios flexibles'"
     />
-    <PlanList />
-    <TestimonialsSection />
+    <PlanList
+      :title="'Programas'"
+      :subtitle="'Obtén el plan que más te conviene'"
+      :plans="plans"
+    />
+    <TestimonialsSection
+      :title="'Testimonios'"
+      :subtitle="'Ellos ya entrenan con nosotros, ¿qué esperas?'"
+      :items="testimonials"
+    />
     <InstructorSection />
   </section>
 </social-layout>

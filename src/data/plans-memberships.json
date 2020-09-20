@@ -6,6 +6,7 @@
       "Acceso 24/7",
       "Rutinas especificas y variadas"
     ],
+    "price": "s/50",
     "condition": "Previa coordinación con atención al cliente"
   },
   {
@@ -16,6 +17,7 @@
       "Capacidad limitada por sesión",
       "Entrenamiento dirigido"
     ],
+    "price": "s/300",
     "condition": ""
   },
   {
@@ -26,6 +28,7 @@
       "Entrenamiento personalizado",
       "Horario a tu medida"
     ],
+    "price": "s/800",
     "condition": "Previa coordinación con atención al cliente"
   },
   {
@@ -36,6 +39,7 @@
       "Con la mejor asesoría",
       "Implementos especializados para el entrenamiento"
     ],
+    "price": "s/1500",
     "condition": ""
   }
 ]

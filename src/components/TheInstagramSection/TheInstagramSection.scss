@@ -1,14 +1,11 @@
 .TheInstagramSection {
   position: relative;
-  height: 366px;
   display: flex;
   align-items: center;
   margin-top: 2rem;
+  overflow: hidden;
 
   .igtv, .igtv-mobile {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
   }
 
@@ -17,26 +14,25 @@
   }
 
   .container {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     z-index: 9;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding-top: 0;
-    padding-bottom: 0;
+    height: 100%;
   }
 
   &-content {
     &-button {
-      margin-top: 100px;
+      margin-top: 60px;
       height: 50px;
     }
   }
 
   @media(min-width: 960px) {
-    height: 245px;
     margin-bottom: 2rem;
 
     .igtv-mobile {
@@ -48,6 +44,8 @@
     }
 
     .container {
+      left: 50%;
+      transform: translateX(-50%);
       flex-direction: row;
     }
 

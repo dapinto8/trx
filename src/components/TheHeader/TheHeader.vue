@@ -5,7 +5,7 @@ export default {
   name: "TheHeader",
   data() {
     return {
-      isShowing: false
+      isShowing: false,
     };
   },
   methods: {
@@ -15,11 +15,11 @@ export default {
       } else {
         this.isShowing = false;
       }
-    }
+    },
   },
   mounted() {
     this.checkViewSize();
     window.addEventListener("resize", this.checkViewSize);
-  }
+  },
 };
 </script>

@@ -1,19 +1,35 @@
-<section class="PlanList background">
+<section class="PlanList background" :class="{ image: background }">
   <div class="container">
-    <h2 class="title-section">Membresía</h2>
-    <h3 class="subtitle-section white">
-      Obtén el plan
-      <br> que más te conviene
-    </h3>
+    <h2 class="title-section">{{ title }}</h2>
+    <h3 class="subtitle-section white">{{ subtitle }}</h3>
     <div class="plans-list-items">
       <VueSlickCarousel v-bind="settings" class="slider-alt">
-        <PlansListItem 
-          v-for="plan in getPlans" 
-          :key="plan.id" 
-          :name="plan.name" 
-          :features="plan.features"
-          :condition="plan.condition" 
-        />
+        <div v-for="plan in plans" :key="plan.id" class="PlanListItem">
+          <template v-if="plan.name">
+            <p class="name">
+              {{ plan.name }}
+            </p>
+            <p v-for="(feature, index) in plan.features" :key="index" class="feature">
+              {{ feature }}
+            </p>
+            <p v-if="plan.price" class="price">
+              {{ plan.price }}
+            </p>
+            <p v-else class="condition">
+              {{ plan.condition }}
+            </p>
+          </template>
+          <div v-else class="next">
+            <p>
+              Más
+              <br /> Adelante
+            </p>
+          </div>
+          <button :class="plan.name ? 'secondary' : 'grey'">
+            {{ plan.name ? 'Accede ahora' : '¡Proximamente!' }}
+            <g-image src="~/assets/icons/arrow-right.svg" alt="Obtener" class="icon-right" />
+          </button>
+        </div>
       </VueSlickCarousel>
     </div>
   </div>

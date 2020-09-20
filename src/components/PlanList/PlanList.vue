@@ -2,19 +2,35 @@
 <style lang="scss" scoped src="./PlanList.scss"></style>
 
 <script>
-import PlansListItem from "~/components/PlanListItem/PlanListItem";
-import Plans from "~/data/plans.json";
+// import PlansListItem from "~/components/PlanListItem/PlanListItem";
 import VueSlickCarousel from "vue-slick-carousel";
 
 export default {
   name: "PlanList",
   components: {
-    PlansListItem,
+    // PlansListItem,
     VueSlickCarousel
+  },
+  props: {
+    title: {
+      type: String,
+      required: true
+    },
+    subtitle: {
+      type: String,
+      required: true
+    },
+    background: {
+      type: Boolean,
+      default: true
+    },
+    plans: {
+      type: Array,
+      required: true
+    }
   },
   data() {
     return {
-      Plans,
       settings: {
         arrows: true,
         infinite: true,
@@ -42,16 +58,6 @@ export default {
         ]
       }
     };
-  },
-  computed: {
-    getPlans: function() {
-      if (Plans.length < 6) {
-        for (let i = 0; i <= 6 - Plans.length; i++) {
-          Plans.push({});
-        }
-      }
-      return Plans;
-    }
   }
 };
 </script>

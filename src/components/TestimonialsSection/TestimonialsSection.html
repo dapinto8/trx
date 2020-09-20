@@ -2,29 +2,35 @@
   <div class="wrapper">
     <div class="container">
       <div class="title">
-        <h2 class="title-section">Testimonios</h2>
-        <h3 class="subtitle-section">
-          Ellos ya entrenan con nosotros, ¿qué esperas?
-        </h3>
+        <h2 class="title-section">{{ title }}</h2>
+        <h3 class="subtitle-section">{{ subtitle }}</h3>
       </div>
       <div class="content not-container">
-        <div class="testimonials">
+        <div v-if="items" class="testimonials">
           <VueSlickCarousel ref="slider" v-bind="settings" class="slider-custom">
-            <div v-for="(testimonial, index) in testimonials" :key="index" class="testimonial">
+            <div v-for="(item, index) in items" :key="index" class="testimonial">
               <div class="people">
-                <g-image :src="testimonial.image" :alt="testimonial.name" width="56" height="56"></g-image>
-                <div>
-                  <p class="name">{{ testimonial.name }}</p>
-                  <p class="position">{{ testimonial.position }}</p>
+                <g-image v-if="item.image" :src="item.image" :alt="item.name" width="56" height="56"></g-image>
+                <div v-if="item.name">
+                  <p class="name">{{ item.name }}</p>
+                  <p class="position">{{ item.position }}</p>
                 </div>
               </div>
-              <p class="comment">{{ testimonial.comment }}</p>
+              <p class="comment">{{ item.comment }}</p>
             </div>
           </VueSlickCarousel>
         </div>
+        <div v-else class="description-wrapper">
+          <p class="description dark">{{ description }}</p>
+          <ul class="list">
+            <li v-for="(feature, index) in features" :key="index">
+              {{ feature }}
+            </li>
+          </ul>
+        </div>
         <div class="background absolute right">
-          <button @click="showPrev" class="slider-prev-custom"></button>
-          <button @click="showNext" class="slider-next-custom"></button>
+          <button v-if="items" @click="showPrev" class="slider-prev-custom"></button>
+          <button v-if="items" @click="showNext" class="slider-next-custom"></button>
         </div>
       </div>
     </div>

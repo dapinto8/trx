@@ -8,6 +8,28 @@ export default {
   components: {
     VueSlickCarousel
   },
+  props: {
+    title: {
+      type: String,
+      required: true
+    },
+    subtitle: {
+      type: String,
+      required: true
+    },
+    items: {
+      type: Array,
+      required: false
+    },
+    description: {
+      type: String,
+      required: false
+    },
+    features: {
+      type: Array,
+      required: false
+    }
+  },
   data() {
     return {
       settings: {
@@ -17,48 +39,6 @@ export default {
         speed: 300,
         slidesToShow: 1
       },
-      testimonials: [
-        {
-          image: require('@/assets/images/people.jpg'),
-          name: 'John Doe',
-          position: 'IT Engineer',
-          comment: `
-            I'm very glad I had the opportunity to visit this hotel.
-            The stuff is very friendly and I will definetly
-            visit the hotel again next year.
-          `
-        },
-        {
-          image: require('@/assets/images/people.jpg'),
-          name: 'John Doe',
-          position: 'IT Engineer',
-          comment: `
-            I'm very glad I had the opportunity to visit this hotel.
-            The stuff is very friendly and I will definetly
-            visit the hotel again next year.
-          `
-        },
-        {
-          image: require('@/assets/images/people.jpg'),
-          name: 'John Doe',
-          position: 'IT Engineer',
-          comment: `
-            I'm very glad I had the opportunity to visit this hotel.
-            The stuff is very friendly and I will definetly
-            visit the hotel again next year.
-          `
-        },
-        {
-          image: require('@/assets/images/people.jpg'),
-          name: 'John Doe',
-          position: 'IT Engineer',
-          comment: `
-            I'm very glad I had the opportunity to visit this hotel.
-            The stuff is very friendly and I will definetly
-            visit the hotel again next year.
-          `
-        }
-      ]
     };
   },
   methods: {

@@ -27,8 +27,8 @@ export default {
     return {
       routines: [
         {
-          title: "Rutinas",
-          subtitle: "Encuentra la motivación y entrena ahora",
+          title: "Rutinas Online",
+          subtitle: "Continua tu entrenamiento",
           description: '',
           type: 'one',
           posts: [
@@ -49,8 +49,8 @@ export default {
           ]
         },
          {
-          title: "Rutinas",
-          subtitle: "Encuentra la motivación y entrena ahora",
+          title: "Más Rutinas Online",
+          subtitle: "Entrena las nuevas rutinas que tenemos para ti",
           description: '',
           type: 'two',
           posts: [

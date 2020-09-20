@@ -1,6 +1,9 @@
 .PlanList {
-  background-image: url('~@/assets/images/membership.jpg');
 
+  &.image {
+    background-image: url('~@/assets/images/membership.jpg');
+  }
+  
   .plans-list-items {
     margin-top: 3rem;
     padding: 0 0.75rem;;
@@ -9,6 +12,77 @@
 
       .slick-prev {
         left: -32px;
+      }
+    }
+
+    .PlanListItem {
+      position: relative;
+      display: flex !important;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 230px;
+      min-width: 230px;
+      min-height: 350px;
+      padding: 2rem 1.5rem;
+      margin-bottom: 25px;
+      text-align: center;
+      background-color: $white;
+    
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+    
+      .name {
+        max-width: 200px;
+        // line-height: 68px;
+        color: $black;
+        font-size: 21px;
+        font-weight: 600;
+      }
+    
+      .feature {
+        font-size: 14px;
+        color: $black;
+        letter-spacing: 0.7px;
+      }
+
+      .price {
+        margin: 0.5rem 0;
+        color: $black;
+        font-size: 24px;
+        font-weight: 600;
+      }
+    
+      .condition {
+        font-size: 12px;
+        color: $grey4;
+        letter-spacing: 0.6px;
+      }
+    
+      .next {
+        margin: auto;
+        color: $grey2;
+        font-size: 32px;
+        font-weight: 600;
+      }
+    
+      button {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: max-content;
+        letter-spacing: 0.8px;
+      }
+    
+      @media (min-width: 768px) {
+        max-width: 260px;
+        min-width: 260px;
+    
+        .name {
+          font-size: 23px;
+        }
       }
     }
   }

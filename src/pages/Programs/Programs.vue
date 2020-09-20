@@ -4,6 +4,9 @@
 import ProgramsSection from "~/components/ProgramsSection/ProgramsSection";
 import PlanList from "~/components/PlanList/PlanList";
 import Blog from "~/components/Blog/Blog";
+import TestimonialsSection from "~/components/TestimonialsSection/TestimonialsSection";
+
+import Plans from "~/data/plans.json";
 
 export default {
   name: "Programs",
@@ -24,7 +27,18 @@ export default {
   components: {
     ProgramsSection,
     PlanList,
-    Blog
+    Blog,
+    TestimonialsSection
+  },
+  computed: {
+    plans: () => {
+      if (Plans.length < 6) {
+        for (let i = 0; i <= 6 - Plans.length; i++) {
+          Plans.push({});
+        }
+      }
+      return Plans;
+    }
   }
 };
 </script>
