@@ -25,10 +25,10 @@
               <br /> Adelante
             </p>
           </div>
-          <button :class="plan.name ? 'secondary' : 'grey'">
+          <g-link :to="plan.route" class="g-link" :class="plan.name ? 'secondary' : 'grey'">
             {{ plan.name ? 'Accede ahora' : '¡Proximamente!' }}
             <g-image src="~/assets/icons/arrow-right.svg" alt="Obtener" class="icon-right" />
-          </button>
+          </g-link>
         </div>
       </VueSlickCarousel>
     </div>

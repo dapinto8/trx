@@ -5,6 +5,7 @@ import ProgramsSection from "~/components/ProgramsSection/ProgramsSection";
 import PlanList from "~/components/PlanList/PlanList";
 import Blog from "~/components/Blog/Blog";
 import TestimonialsSection from "~/components/TestimonialsSection/TestimonialsSection";
+import YoutubeSection from '~/components/YoutubeSection/YoutubeSection';
 
 import Plans from "~/data/plans.json";
 
@@ -28,7 +29,13 @@ export default {
     ProgramsSection,
     PlanList,
     Blog,
-    TestimonialsSection
+    TestimonialsSection,
+    YoutubeSection
+  },
+  data() {
+    return {
+      tab: 0
+    }
   },
   computed: {
     plans: () => {

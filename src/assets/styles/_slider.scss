@@ -246,4 +246,13 @@
       min-width: 1340px;
     }
   }
+
+  .slick-slider.slick-initialized {
+    .slick-prev {
+      left: 30px;
+    }
+    .slick-next {
+      right: 30px;
+    }
+  }
 }

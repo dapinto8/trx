@@ -1,67 +1,80 @@
-<social-layout>
+<main-layout>
   <section class="Programs">
     <div class="page-background alt background">
       <div class="container">
         <h1 class="page-background-title">PROGRAMAS</h1>
         <ul class="Programs-page-background-list">
-          <li class="Programs-page-background-list-item yellow">
+          <li @click="tab = 0" class="Programs-page-background-list-item" :class="{ yellow: tab === 0 }">
             Membresías
           </li>
           <li class="Programs-page-background-list-divider"></li>
-          <li class="Programs-page-background-list-item">
+          <li @click="tab = 1" class="Programs-page-background-list-item" :class="{ yellow: tab === 1 }">
             Rutinas
           </li>
           <li class="Programs-page-background-list-divider"></li>
-          <li class="Programs-page-background-list-item">
+          <li @click="tab = 2" class="Programs-page-background-list-item" :class="{ yellow: tab === 2 }">
             Personal Trainning
+          </li>
+          <li class="Programs-page-background-list-divider"></li>
+          <li @click="tab = 3" class="Programs-page-background-list-item" :class="{ yellow: tab === 3 }">
+            Youtube
           </li>
         </ul>
       </div>
     </div>
-    <ProgramsSection 
-      :title="'ZOOM TRAINNING'"
-      :subtitle="'Entrenamiento dirigido con horarios flexibles'"
-      :benefits="[
-        'Ingreso a videollamadas  del entrenamiento',
-        'Entrenamiento dirigido durante la sesiones',
-        'Capacidad limitada por sesión',
-        'Horarios flexibles'
-      ]"
-      :buttonText="'Accede ahora'"
-    />
-    <PlanList
-      :title="'Programas'"
-      :subtitle="'Obtén el plan que más te conviene'"
-      :plans="plans"
-    />
-    <Blog />
-    <ProgramsSection 
-      :title="'PERSONAL TRAINNING'"
-      :subtitle="'Alcanza tu objetivo con el mejor resultado'"
-      :description="`
-        Un programa de alto nivel de resultados, 
-        transformaciones físicas efectivas dependiendo del
-        objetivo que se desee obtener
-      `"
-      :benefits="[
-        'Entrenamiento personalizado y a tu medida',
-        'Sesiones completamente dirigidas',
-        'Horarios flexibles',
-        'Resultados comprobados'
-      ]"
-      :buttonText="'Accede ahora'"
-    />
-    <TestimonialsSection
-      :title="'Gimnasio + Rutinas Online'"
-      :subtitle="'El mejor lugar para tus entrenamientos'"
-      :description="'Un programa de alto nivel de resultados, transformaciones físicas efectivas dependiendo del objetivo que se desee obtener'"
-      :features="[
-        'Asesoría especializada',
-        'Las mejores instalaciones y implementos',
-        'Zona centrica y accesible',
-        'Horarios flexibles',
-        'Acceso a la plataforma de entrenamiento'
-      ]"
-    />
+    <div v-if="tab === 0">
+      <ProgramsSection 
+        :title="'ZOOM TRAINNING'"
+        :subtitle="'Entrenamiento dirigido con horarios flexibles'"
+        :benefits="[
+          'Ingreso a videollamadas  del entrenamiento',
+          'Entrenamiento dirigido durante la sesiones',
+          'Capacidad limitada por sesión',
+          'Horarios flexibles'
+        ]"
+        :buttonText="'Accede ahora'"
+      />
+      <PlanList
+        :title="'Programas'"
+        :subtitle="'Obtén el plan que más te conviene'"
+        :plans="plans"
+      />
+    </div>
+    <div v-if="tab === 1">
+      <Blog />
+    </div>
+    <div v-if="tab === 2">
+      <ProgramsSection 
+        :title="'PERSONAL TRAINNING'"
+        :subtitle="'Alcanza tu objetivo con el mejor resultado'"
+        :description="`
+          Un programa de alto nivel de resultados, 
+          transformaciones físicas efectivas dependiendo del
+          objetivo que se desee obtener
+        `"
+        :benefits="[
+          'Entrenamiento personalizado y a tu medida',
+          'Sesiones completamente dirigidas',
+          'Horarios flexibles',
+          'Resultados comprobados'
+        ]"
+        :buttonText="'Accede ahora'"
+      />
+      <TestimonialsSection
+        :title="'Gimnasio + Rutinas Online'"
+        :subtitle="'El mejor lugar para tus entrenamientos'"
+        :description="'Un programa de alto nivel de resultados, transformaciones físicas efectivas dependiendo del objetivo que se desee obtener'"
+        :features="[
+          'Asesoría especializada',
+          'Las mejores instalaciones y implementos',
+          'Zona centrica y accesible',
+          'Horarios flexibles',
+          'Acceso a la plataforma de entrenamiento'
+        ]"
+      />
+    </div>
+    <div v-if="tab === 3">
+      <YoutubeSection />
+    </div>
   </section>
-</social-layout>
+</main-layout>

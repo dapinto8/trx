@@ -6,7 +6,8 @@
       "Acceso 24/7",
       "Rutinas especificas y variadas"
     ],
-    "condition": "Previa coordinación con atención al cliente"
+    "condition": "Previa coordinación con atención al cliente",
+    "route": "/programs"
   },
   {
     "id": 2,
@@ -16,7 +17,8 @@
       "Capacidad limitada por sesión",
       "Entrenamiento dirigido"
     ],
-    "condition": ""
+    "condition": "",
+    "route": "/programs"
   },
   {
     "id": 3,
@@ -26,7 +28,8 @@
       "Entrenamiento personalizado",
       "Horario a tu medida"
     ],
-    "condition": "Previa coordinación con atención al cliente"
+    "condition": "Previa coordinación con atención al cliente",
+    "route": "/programs"
   },
   {
     "id": 4,
@@ -36,6 +39,7 @@
       "Con la mejor asesoría",
       "Implementos especializados para el entrenamiento"
     ],
-    "condition": ""
+    "condition": "",
+    "route": "/programs"
   }
 ]
