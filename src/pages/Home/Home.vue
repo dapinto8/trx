@@ -1,5 +1,32 @@
 <template src="./Home.html"></template>
 <style lang="scss" scoped src="./Home.scss"></style>
+<static-query>
+  query {
+    testimonials: allStrapiTestimonios {
+      edges {
+        node {
+          id
+          name
+          position
+          photo {
+            url
+          }
+          testimony
+        }
+      }
+    },
+    plans: allStrapiPlans {
+      edges {
+        node {
+          id
+          name
+          condition
+          features
+        }
+      }
+    }
+  }
+</static-query>
 <script>
 import ProgramsSection from "~/components/ProgramsSection/ProgramsSection";
 import PlanList from "~/components/PlanList/PlanList";
@@ -54,48 +81,6 @@ export default {
         {
           title: 'Gimnasio + Rutinas online',
           description: 'Entrena con nosotros en el gimnasio y obtén un acceso a nuestra plataforma online'
-        }
-      ],
-      testimonials: [
-        {
-          image: require('@/assets/images/people.jpg'),
-          name: 'John Doe',
-          position: 'IT Engineer',
-          comment: `
-            I'm very glad I had the opportunity to visit this hotel.
-            The stuff is very friendly and I will definetly
-            visit the hotel again next year.
-          `
-        },
-        {
-          image: require('@/assets/images/people.jpg'),
-          name: 'John Doe',
-          position: 'IT Engineer',
-          comment: `
-            I'm very glad I had the opportunity to visit this hotel.
-            The stuff is very friendly and I will definetly
-            visit the hotel again next year.
-          `
-        },
-        {
-          image: require('@/assets/images/people.jpg'),
-          name: 'John Doe',
-          position: 'IT Engineer',
-          comment: `
-            I'm very glad I had the opportunity to visit this hotel.
-            The stuff is very friendly and I will definetly
-            visit the hotel again next year.
-          `
-        },
-        {
-          image: require('@/assets/images/people.jpg'),
-          name: 'John Doe',
-          position: 'IT Engineer',
-          comment: `
-            I'm very glad I had the opportunity to visit this hotel.
-            The stuff is very friendly and I will definetly
-            visit the hotel again next year.
-          `
         }
       ]
     }

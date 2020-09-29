@@ -1,5 +1,19 @@
 <template src="./Programs.html"></template>
 <style lang="scss" scoped src="./Programs.scss"></style>
+<static-query>
+  query {
+    plans: allStrapiPlans {
+      edges {
+        node {
+          id
+          name
+          condition
+          features
+        }
+      }
+    }
+  }
+</static-query>
 <script>
 import ProgramsSection from "~/components/ProgramsSection/ProgramsSection";
 import PlanList from "~/components/PlanList/PlanList";

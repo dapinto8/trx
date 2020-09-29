@@ -12,6 +12,21 @@
   }
 }
 </style>
+<static-query>
+  query {
+    plans: allStrapiPlans {
+      edges {
+        node {
+          id
+          name
+          condition
+          features
+          price
+        }
+      }
+    }
+  }
+</static-query>
 <script>
 import UserNav from "~/components/UserNav/UserNav";
 import PlanList from "~/components/PlanList/PlanList";

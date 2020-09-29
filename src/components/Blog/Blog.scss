@@ -1,6 +1,10 @@
 .Blog {
   padding-top: 3rem;
 
+  .g-link {
+    max-width: none;
+  }
+
   &-section {
     &:not(:last-child) {
       margin-bottom: 2rem;

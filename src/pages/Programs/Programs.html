@@ -37,7 +37,7 @@
       <PlanList
         :title="'Programas'"
         :subtitle="'Obtén el plan que más te conviene'"
-        :plans="plans"
+        :plans="$static.plans.edges"
       />
     </div>
     <div v-if="tab === 1">

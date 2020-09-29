@@ -1,5 +1,25 @@
 <template src="./YoutubeSection.html"></template>
 <style lang="scss" scoped src="./YoutubeSection.scss"></style>
+<static-query>
+  query {
+    videos: allStrapiYoutube {
+      edges {
+        node {
+          id
+          title
+          url
+          cover {
+            id
+            name
+            alternativeText
+            ext
+            url(quality: 100)
+          }
+        }
+      }
+    }
+  }
+</static-query>
 <script>
 import VueSlickCarousel from "vue-slick-carousel";
 
@@ -29,29 +49,7 @@ export default {
             }
           }
         ]
-      },
-      videos: [
-        {
-          image: require('@/assets/images/youtube_1@2x.jpg'),
-          title: 'Haz este Ejercicio por solo 7 Minutos en casa'
-        },
-        {
-          image: require('@/assets/images/youtube_2@2x.jpg'),
-          title: 'Rutina de ESPALDA con TRX'
-        },
-        {
-          image: require('@/assets/images/youtube_3@2x.jpg'),
-          title: 'Rutina de PIERNAS con bandas'
-        },
-        {
-          image: require('@/assets/images/youtube_1@2x.jpg'),
-          title: 'Haz este Ejercicio por solo 7 Minutos en casa'
-        },
-        {
-          image: require('@/assets/images/youtube_2@2x.jpg'),
-          title: 'Rutina de ESPALDA con TRX'
-        }
-      ]
+      }
     };
   }
 };

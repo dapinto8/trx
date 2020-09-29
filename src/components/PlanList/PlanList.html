@@ -4,19 +4,19 @@
     <h3 class="subtitle-section white">{{ subtitle }}</h3>
     <div class="plans-list-items">
       <VueSlickCarousel v-bind="settings" class="slider-alt">
-        <div v-for="plan in plans" :key="plan.id" class="PlanListItem">
-          <template v-if="plan.name">
+        <div v-for="({ node }) in plans" :key="node.id" class="PlanListItem">
+          <template v-if="node.name">
             <p class="name">
-              {{ plan.name }}
+              {{ node.name }}
             </p>
-            <p v-for="(feature, index) in plan.features" :key="index" class="feature">
+            <p v-for="(feature, index) in node.features.split('\n')" :key="index" class="feature">
               {{ feature }}
             </p>
-            <p v-if="plan.price" class="price">
-              {{ plan.price }}
+            <p v-if="node.price" class="price">
+              s/{{ node.price }}
             </p>
             <p v-else class="condition">
-              {{ plan.condition }}
+              {{ node.condition }}
             </p>
           </template>
           <div v-else class="next">
@@ -25,8 +25,8 @@
               <br /> Adelante
             </p>
           </div>
-          <g-link :to="plan.route" class="g-link" :class="plan.name ? 'secondary' : 'grey'">
-            {{ plan.name ? 'Accede ahora' : '¡Proximamente!' }}
+          <g-link to="/programs" class="g-link" :class="node.name ? 'secondary' : 'grey'">
+            {{ node.name ? 'Accede ahora' : '¡Proximamente!' }}
             <g-image src="~/assets/icons/arrow-right.svg" alt="Obtener" class="icon-right" />
           </g-link>
         </div>

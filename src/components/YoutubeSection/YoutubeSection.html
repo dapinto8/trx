@@ -7,14 +7,14 @@
     </h3>
     <div class="YoutubeSection-video-list">
       <VueSlickCarousel v-bind="settings">
-        <div v-for="(video, index) in videos" :key="index" class="YoutubeSection-video-list-item">
-          <a href="#" target="_blank" rel="noopener noreferrer">
+        <div v-for="({ node }) in $static.videos.edges" :key="node.id" class="YoutubeSection-video-list-item">
+          <a :href="node.url" target="_blank" rel="noopener noreferrer">
             <div class="background absolute left play black"></div>
             <div class="background absolute left"
-              v-bind:style="{ backgroundImage: 'url(' + video.image + ')'  }">
+              :style="{ backgroundImage: 'url(http://3.132.165.252:1337' + node.cover.url + ')'  }">
             </div>
             <p class="YoutubeSection-video-list-item-title">
-              {{ video.title }}
+              {{ node.title }}
             </p>
           </a>
         </div>

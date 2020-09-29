@@ -47,12 +47,12 @@
     <PlanList
       :title="'Programas'"
       :subtitle="'Obtén el plan que más te conviene'"
-      :plans="plans"
+      :plans="$static.plans.edges"
     />
     <TestimonialsSection
       :title="'Testimonios'"
       :subtitle="'Ellos ya entrenan con nosotros, ¿qué esperas?'"
-      :items="testimonials"
+      :items="$static.testimonials.edges"
     />
     <InstructorSection />
   </section>
