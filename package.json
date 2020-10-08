@@ -10,6 +10,7 @@
     "@gridsome/source-strapi": "^0.2.0",
     "axios": "^0.19.2",
     "gridsome": "^0.7.0",
+    "vue-cookies": "^1.7.4",
     "vue-slick-carousel": "^1.0.5"
   },
   "devDependencies": {

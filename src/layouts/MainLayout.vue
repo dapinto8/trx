@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import TheHeader from "~/components/TheHeader/TheHeader";
-import TheFooter from "~/components/TheFooter/TheFooter";
+import TheHeader from '~/components/TheHeader/TheHeader';
+import TheFooter from '~/components/TheFooter/TheFooter';
 
 export default {
   name: 'MainLayout',

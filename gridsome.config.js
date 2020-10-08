@@ -15,7 +15,7 @@ module.exports = {
     {
       use: '@gridsome/source-strapi',
       options: {
-        apiURL: 'http://3.132.165.252:1337',
+        apiURL:  process.env.GRIDSOME_API_URL,
         queryLimit: 1000,
         contentTypes: ['descuentos', 'plans', 'testimonios', 'youtube'],
         singleTypes: [],

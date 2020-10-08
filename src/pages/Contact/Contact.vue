@@ -2,20 +2,19 @@
 <style lang="scss" scoped src="./Contact.scss"></style>
 <script>
 export default {
-  name: "Contact",
+  name: 'Contact',
   metaInfo: {
-    title: "Encuéntranos",
+    title: 'Encuéntranos',
     meta: [
       {
-        name: "description",
-        content:
-          "Contáctanos para aclarar cualquier duda"
+        name: 'description',
+        content: 'Contáctanos para aclarar cualquier duda'
       },
       {
-        name: "keywords",
-        content: "Contacto, Consultas, Rutinas, Ejercicio, Entranamiento"
+        name: 'keywords',
+        content: 'Contacto, Consultas, Rutinas, Ejercicio, Entranamiento'
       }
     ]
   }
-}
+};
 </script>

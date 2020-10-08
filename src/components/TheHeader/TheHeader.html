@@ -18,7 +18,29 @@
         <g-link @click="isShowing = !isShowing" class="TheHeader-nav-link" to="/programs">Programa</g-link>
         <!--<g-link class="TheHeader-nav-link" to="/plans">Planes</g-link>-->
         <g-link class="TheHeader-nav-link" to="/contact">Encuentranos</g-link>
-        <div class="TheHeader-nav-link-yellow">
+        <div v-if="name" class="TheHeader-user">
+          <UserNav class="TheHeader-user-nav"/>
+          <div class="TheHeader-user-name">
+            <button  @click="showUserMenu = !showUserMenu">
+              <span>Hello,</span>
+              <span>{{ name }}</span>
+            </button>
+            <transition name="dropdown">
+              <ul v-if="showUserMenu" class="TheHeader-user-menu">
+                <li class="TheHeader-user-menu-item">
+                  <g-link to="/courses">Mis Cursos</g-link>
+                </li>
+                <li class="TheHeader-user-menu-item">
+                  <g-link to="/profile">Mi perfil</g-link>
+                </li>
+                <li class="TheHeader-user-menu-item">
+                  <g-link class="UserNav-link" to="/memberships">Membresía</g-link>
+                </li>
+              </ul>
+            </transition>
+          </div>
+        </div>
+        <div v-else class="TheHeader-nav-link-yellow">
           <g-link class="TheHeader-nav-link link" to="/sign-in">Inicia Sesión</g-link>
           <g-link class="TheHeader-nav-link link" to="/sign-up">Registrate aquí</g-link>
         </div>

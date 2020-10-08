@@ -1,21 +1,21 @@
 <template src="./UserHome.html"></template>
 <style lang="scss" scoped src="./UserHome.scss"></style>
 <script>
-import UserNav from "~/components/UserNav/UserNav";
-import Blog from "~/components/Blog/Blog";
+import UserNav from '~/components/UserNav/UserNav';
+import Blog from '~/components/Blog/Blog';
 
 export default {
-  name: "UserHome",
+  name: 'UserHome',
   metaInfo: {
-    title: "Home",
+    title: 'Home',
     meta: [
       {
-        name: "description",
-        content: "Home"
+        name: 'description',
+        content: 'Home'
       },
       {
-        name: "keywords",
-        content: "Home, Training, TRX Trainer"
+        name: 'keywords',
+        content: 'Home, Training, TRX Trainer'
       }
     ]
   },
@@ -25,53 +25,62 @@ export default {
   },
   data() {
     return {
+      name: '',
       routines: [
         {
-          title: "Rutinas Online",
-          subtitle: "Continua tu entrenamiento",
+          title: 'Rutinas Online',
+          subtitle: 'Continua tu entrenamiento',
           description: '',
           type: 'one',
           posts: [
             {
-              image: require("@/assets/images/post-foods.jpg"),
-              category: "Food and life",
-              title: "Succed in hotel business",
+              image: require('@/assets/images/post-foods.jpg'),
+              category: 'Food and life',
+              title: 'Succed in hotel business',
               description:
-                "Fresh food directly from our restaurant ready coocked for you and you familly"
+                'Fresh food directly from our restaurant ready coocked for you and you familly'
             },
             {
-              image: require("@/assets/images/post-cooking.jpg"),
-              category: "Cooking",
-              title: "Cooking delicious food",
+              image: require('@/assets/images/post-cooking.jpg'),
+              category: 'Cooking',
+              title: 'Cooking delicious food',
               description:
-                "Fresh food directly from our restaurant ready coocked for you and you familly"
+                'Fresh food directly from our restaurant ready coocked for you and you familly'
             }
           ]
         },
-         {
-          title: "Más Rutinas Online",
-          subtitle: "Entrena las nuevas rutinas que tenemos para ti",
+        {
+          title: 'Más Rutinas Online',
+          subtitle: 'Entrena las nuevas rutinas que tenemos para ti',
           description: '',
           type: 'two',
           posts: [
             {
-              image: require("@/assets/images/post-foods.jpg"),
-              category: "Big",
-              title: "Spacious Room",
+              image: require('@/assets/images/post-foods.jpg'),
+              category: 'Big',
+              title: 'Spacious Room',
               description:
-                "The most spacious room you will ever see inwith span and warm beds"
+                'The most spacious room you will ever see inwith span and warm beds'
             },
             {
-              image: require("@/assets/images/post-cooking.jpg"),
-              category: "Big",
-              title: "Spacious Room",
+              image: require('@/assets/images/post-cooking.jpg'),
+              category: 'Big',
+              title: 'Spacious Room',
               description:
-                "The most spacious room you will ever see inwith span and warm beds"
+                'The most spacious room you will ever see inwith span and warm beds'
             }
           ]
         }
       ]
+    };
+  },
+  beforeCreate() {
+    if (!this.$cookies.isKey('session')) {
+      this.$router.push('/');
     }
   },
+  created() {
+    this.name = this.$cookies.get('session').user.name;
+  }
 };
 </script>

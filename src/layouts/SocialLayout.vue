@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import YoutubeSection from "~/components/YoutubeSection/YoutubeSection";
-import TheInstagramSection from "~/components/TheInstagramSection/TheInstagramSection";
+import YoutubeSection from '~/components/YoutubeSection/YoutubeSection';
+import TheInstagramSection from '~/components/TheInstagramSection/TheInstagramSection';
 
 export default {
   name: 'SocialLayout',

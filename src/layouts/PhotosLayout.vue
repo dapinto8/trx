@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import PhotosSection from "~/components/PhotosSection/PhotosSection";
+import PhotosSection from '~/components/PhotosSection/PhotosSection';
 
 export default {
   name: 'PhotosLayout',

@@ -2,7 +2,7 @@
 <style lang="scss" scoped src="./ProgramsSection.scss"></style>
 <script>
 export default {
-  name: "ProgramsSection",
+  name: 'ProgramsSection',
   props: {
     title: {
       type: String,
@@ -31,7 +31,7 @@ export default {
     },
     buttonText: {
       type: String,
-      default: "Más información"
+      default: 'Más información'
     },
     isHomeView: {
       type: Boolean,

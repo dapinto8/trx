@@ -30,46 +30,61 @@
     }
   }
 
+  &-user {
+    order: -1;
+    width: 100%;
+
+    &-nav {
+      display: block;
+    }
+    &-name {
+      display: none;
+    }
+  }
+
   &-nav {
     position: absolute;
     z-index: 9;
-    top: 0;
+    top: 73px;
     right: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 90%;
+    width: 100%;
     height: 100vh;
-    padding-top: 4rem;
-    background-color: $secondary;
+    background-color: $black;
 
     &-link {
       width: 100%;
       display: block;
-      text-align: left;
-      font-size: 32px;
-      color: $black;
       font-weight: 700;
       position: relative;
       padding: 1rem 2rem;
+      color: $white;
+      font-size: 22px;
+      font-weight: 800;
+      text-align: center;
       transition: all ease-in 100ms;
       
       &.active--exact {
-        &::after {
-          content: '';
-          position: absolute;
-          z-index: -1;
-          bottom: 25px;
-          right: 0;
-          display: block;
-          width: calc(100% - 110px);
-          height: 8px;
-          background-color: $white;
-        }
+        color: $primary;
       }
 
       &-yellow {
+        order: -1;
         width: 100%;
+        padding: 1rem 0;
+        background-color: $primary;
+
+        .link {
+          padding: 0;
+          color: $black;
+
+          &:last-child {
+            font-size: 12px;
+            font-weight: 600;
+          }
+        }
       }
     }
   }
@@ -84,6 +99,63 @@
 
     &-menu { display: none; }
 
+    &-user {
+      order: 1;
+      position: relative;
+      min-width: 140px;
+      background-color: $secondary;
+
+      &-nav {
+        display: none;
+      }
+  
+      &-name {
+        display: block;
+        height: 82px;
+        padding: 0 1rem;
+  
+        color: $black;
+  
+        button {
+          flex-direction: column;
+          align-items: flex-start;
+          width: 100%;
+          height: 100%;
+          padding: 0;
+          font-size: 14px;
+  
+          span {
+            display: block;
+  
+            &:last-child {
+              font-weight: 700;
+            }
+          }
+        }
+      }
+  
+      &-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: $background-light;
+  
+        &-item a {
+          display: block;
+          padding: 1rem;
+          font-size: 14px;
+          font-weight: 500;
+          color: $black;
+  
+          &.active--exact, &:hover {
+            background-color: $dark-green;
+            color: $white;
+          }
+        }
+      }
+    }
+
     &-nav {
       position: static;
       transform: translateX(0);
@@ -97,7 +169,6 @@
         width: auto;
         padding: 2rem 1rem;
         text-transform: uppercase;
-        text-align: center;
         color: $white;
         font-size: 12px;
         font-weight: 500;
@@ -132,10 +203,10 @@
         }
 
         &-yellow {
+          order: 1;
           position: relative;
           padding: 2rem 0.5rem;
           text-align: center;
-          background-color: $primary;
 
           .link {
             padding: 0;

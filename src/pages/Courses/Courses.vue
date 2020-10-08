@@ -1,21 +1,21 @@
 <template src="./Courses.html"></template>
 <style lang="scss" scoped src="./Courses.scss"></style>
 <script>
-import UserNav from "~/components/UserNav/UserNav";
-import Blog from "~/components/Blog/Blog";
+import UserNav from '~/components/UserNav/UserNav';
+import Blog from '~/components/Blog/Blog';
 
 export default {
-  name: "Courses",
+  name: 'Courses',
   metaInfo: {
-    title: "Mis cursos",
+    title: 'Mis cursos',
     meta: [
       {
-        name: "description",
-        content: "Mis cursos"
+        name: 'description',
+        content: 'Mis cursos'
       },
       {
-        name: "keywords",
-        content: "Cursos, Training, TRX Trainer"
+        name: 'keywords',
+        content: 'Cursos, Training, TRX Trainer'
       }
     ]
   },
@@ -26,44 +26,49 @@ export default {
   data() {
     return {
       courses: [
-         {
-          title: "Rutinas",
-          subtitle: "Encuentra la motivación y entrena ahora",
+        {
+          title: 'Rutinas',
+          subtitle: 'Encuentra la motivación y entrena ahora',
           description: '',
           type: 'two',
           posts: [
             {
-              image: require("@/assets/images/post-foods.jpg"),
-              category: "Big",
-              title: "Spacious Room",
+              image: require('@/assets/images/post-foods.jpg'),
+              category: 'Big',
+              title: 'Spacious Room',
               description:
-                "The most spacious room you will ever see inwith span and warm beds"
+                'The most spacious room you will ever see inwith span and warm beds'
             },
             {
-              image: require("@/assets/images/post-cooking.jpg"),
-              category: "Big",
-              title: "Spacious Room",
+              image: require('@/assets/images/post-cooking.jpg'),
+              category: 'Big',
+              title: 'Spacious Room',
               description:
-                "The most spacious room you will ever see inwith span and warm beds"
+                'The most spacious room you will ever see inwith span and warm beds'
             },
             {
-              image: require("@/assets/images/post-cooking.jpg"),
-              category: "Big",
-              title: "Spacious Room",
+              image: require('@/assets/images/post-cooking.jpg'),
+              category: 'Big',
+              title: 'Spacious Room',
               description:
-                "The most spacious room you will ever see inwith span and warm beds"
+                'The most spacious room you will ever see inwith span and warm beds'
             },
             {
-              image: require("@/assets/images/post-cooking.jpg"),
-              category: "Big",
-              title: "Spacious Room",
+              image: require('@/assets/images/post-cooking.jpg'),
+              category: 'Big',
+              title: 'Spacious Room',
               description:
-                "The most spacious room you will ever see inwith span and warm beds"
+                'The most spacious room you will ever see inwith span and warm beds'
             }
           ]
         }
       ]
-    }
+    };
   },
+  beforeCreate() {
+    if (!this.$cookies.isKey('session')) {
+      this.$router.push('/');
+    }
+  }
 };
 </script>

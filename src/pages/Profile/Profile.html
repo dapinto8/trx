@@ -27,30 +27,30 @@
             <div class="Profile-form-controls">
               <div class="Profile-form-control">
                 <label for="names">Nombres</label>
-                <input type="text" name="names" id="names" placeholder="Nombres">
+                <input type="text" v-model="user.name" name="names" id="names" placeholder="Nombres">
               </div>
               <div class="Profile-form-control">
                 <label for="surnames">Apellidos</label>
-                <input type="text" name="surnames" id="surnames" placeholder="Apellidos">
+                <input type="text" v-model="user.last_name" name="surnames" id="surnames" placeholder="Apellidos">
               </div>
               <div class="Profile-form-control">
                 <label for="bithdate">Fecha de nacimiento</label>
-                <input type="text" name="bithdate" id="bithdate" placeholder="Fecha de nacimiento">
+                <input type="text" v-model="user.bithdate" name="bithdate" id="bithdate" placeholder="Fecha de nacimiento">
               </div>
               <div class="Profile-form-control">
-                <label for="email">Télefono</label>
-                <input type="text" name="email" id="email" placeholder="Télefono">
+                <label for="phone">Télefono</label>
+                <input type="text" v-model="user.phone" name="phone" id="phone" placeholder="Télefono">
               </div>
               <div class="Profile-form-control">
                 <label for="email">Correo electrónico</label>
-                <input type="text" name="email" id="email" placeholder="Correo electrónico">
+                <input type="text" v-model="user.email" name="email" id="email" placeholder="Correo electrónico">
               </div>
               <div class="Profile-form-control">
                 <label for="instagram">Instagram</label>
-                <input type="text" name="instagram" id="instagram" placeholder="Instagram">
+                <input type="text" v-model="user.instagram" name="instagram" id="instagram" placeholder="Instagram">
               </div>
             </div>
-            <button type="submit" class="Profile-form-button">
+            <button @click="submit" type="button" class="Profile-form-button">
               Guardar
               <g-image src="~/assets/icons/arrow-right.svg" alt="Editar" class="icon-right" />
             </button>
@@ -70,30 +70,30 @@
             <div class="Profile-form-controls">
               <div class="Profile-form-control">
                 <label for="city">¿Donde vives?</label>
-                <input type="text" name="city" id="city" placeholder="¿Donde vives?">
+                <input type="text" v-model="user.direction" name="city" id="city" placeholder="¿Donde vives?">
               </div>
               <div class="Profile-form-control">
                 <label for="goal">Tu objetivo</label>
-                <input type="text" name="goal" id="goal" placeholder="Tu objetivo">
+                <input type="text" v-model="user.objetive" name="goal" id="goal" placeholder="Tu objetivo">
               </div>
               <div class="Profile-form-control">
                 <label for="weight">¿Cuánto pesas?</label>
-                <input type="text" name="weight" id="weight" placeholder="¿Cuánto pesas?">
+                <input type="text" v-model="user.weight" name="weight" id="weight" placeholder="¿Cuánto pesas?">
               </div>
               <div class="Profile-form-control">
                 <label for="profession">¿A que te dedicas?</label>
-                <input type="text" name="profession" id="profession" placeholder="Profesión">
+                <input type="text" v-model="user.job" name="profession" id="profession" placeholder="Profesión">
               </div>
               <div class="Profile-form-control">
                 <label for="activity">Nivel de actividad</label>
-                <input type="text" name="activity" id="activity" placeholder="Nivel de actividad">
+                <input type="text" v-model="user.activity_level" name="activity" id="activity" placeholder="Nivel de actividad">
               </div>
               <div class="Profile-form-control">
                 <label for="height">¿Qué estatura tienes?</label>
-                <input type="text" name="height" id="height" placeholder="¿Qué estatura tienes?">
+                <input type="text" v-model="user.height" name="height" id="height" placeholder="¿Qué estatura tienes?">
               </div>
             </div>
-            <button type="submit" class="Profile-form-button">
+            <button @click="submit" type="button" class="Profile-form-button">
               Guardar
               <g-image src="~/assets/icons/arrow-right.svg" alt="Editar" class="icon-right" />
             </button>

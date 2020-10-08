@@ -15,27 +15,27 @@
   }
 </static-query>
 <script>
-import ProgramsSection from "~/components/ProgramsSection/ProgramsSection";
-import PlanList from "~/components/PlanList/PlanList";
-import Blog from "~/components/Blog/Blog";
-import TestimonialsSection from "~/components/TestimonialsSection/TestimonialsSection";
+import ProgramsSection from '~/components/ProgramsSection/ProgramsSection';
+import PlanList from '~/components/PlanList/PlanList';
+import Blog from '~/components/Blog/Blog';
+import TestimonialsSection from '~/components/TestimonialsSection/TestimonialsSection';
 import YoutubeSection from '~/components/YoutubeSection/YoutubeSection';
 
-import Plans from "~/data/plans.json";
+import Plans from '~/data/plans.json';
 
 export default {
-  name: "Programs",
+  name: 'Programs',
   metaInfo: {
-    title: "Programas",
+    title: 'Programas',
     meta: [
       {
-        name: "description",
+        name: 'description',
         content:
-          "Descubre nuestros programas online para llegar a la mejor versión de tu cuerpo"
+          'Descubre nuestros programas online para llegar a la mejor versión de tu cuerpo'
       },
       {
-        name: "keywords",
-        content: "Programas, Membresías, Rutinas, Ejercicio, Entranamiento"
+        name: 'keywords',
+        content: 'Programas, Membresías, Rutinas, Ejercicio, Entranamiento'
       }
     ]
   },
@@ -49,7 +49,7 @@ export default {
   data() {
     return {
       tab: 0
-    }
+    };
   },
   computed: {
     plans: () => {

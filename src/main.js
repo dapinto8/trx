@@ -6,6 +6,7 @@ import MainLayout from '~/layouts/MainLayout.vue'
 import SocialLayout from '~/layouts/SocialLayout.vue'
 import PhotosLayout from '~/layouts/PhotosLayout.vue'
 import InstagramLayout from '~/layouts/InstagramLayout.vue'
+import VueCookies from 'vue-cookies'
 
 import '~/assets/styles/styles.scss'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css';
@@ -18,6 +19,8 @@ export default function (Vue, { router, head, isClient }) {
   Vue.component('SocialLayout', SocialLayout)
   Vue.component('PhotosLayout', PhotosLayout)
   Vue.component('InstagramLayout', InstagramLayout)
+
+  Vue.use(VueCookies);
 
   // Font
   head.link.push({

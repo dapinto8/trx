@@ -45,5 +45,19 @@ form {
     resize: none;
   }
 
+  .errors {
+    padding: 1rem 1.5rem;
+
+    .error {
+      height: 22px;
+      font-size: 14px;
+      color: $red;
+    }
+  }
+
+  .success {
+    padding: 1rem 1.5rem;
+  }
+
 }
 

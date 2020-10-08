@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import Home from "./Home/Home.vue";
+import Home from './Home/Home.vue';
 
 export default {
   name: 'Index',
@@ -11,7 +11,7 @@ export default {
     Home
   },
   metaInfo: {
-    title: "Jesús Lezama"
+    title: 'Jesús Lezama'
   }
 };
 </script>

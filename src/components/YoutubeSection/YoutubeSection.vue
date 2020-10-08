@@ -21,10 +21,10 @@
   }
 </static-query>
 <script>
-import VueSlickCarousel from "vue-slick-carousel";
+import VueSlickCarousel from 'vue-slick-carousel';
 
 export default {
-  name: "YoutubeSection",
+  name: 'YoutubeSection',
   components: {
     VueSlickCarousel
   },

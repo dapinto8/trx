@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import TheInstagramSection from "~/components/TheInstagramSection/TheInstagramSection";
+import TheInstagramSection from '~/components/TheInstagramSection/TheInstagramSection';
 
 export default {
   name: 'InstagramLayout',

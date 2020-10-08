@@ -10,7 +10,8 @@ module.exports = function (api) {
     // Use the Pages API here: https://gridsome.org/docs/pages-api/
     createPage({
       path: '/programs',
-      component: './src/pages/Programs/Programs.vue'
+      component: './src/pages/Programs/Programs.vue',
+      
     }),
     createPage({
       path: '/contact',
@@ -40,19 +41,5 @@ module.exports = function (api) {
       path: '/memberships',
       component: './src/pages/Memberships/Memberships.vue'
     })
-  }),
-  api.loadSource(({ addCollection }) => {
-    // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
-
-    const Plans = require('./src/data/plans.json')
-
-    const collection = addCollection({
-      typeName: 'Plans'
-    })
-    
-    for (const plan of Plans) {
-      collection.addNode(plan)
-    }
   })
-
 }

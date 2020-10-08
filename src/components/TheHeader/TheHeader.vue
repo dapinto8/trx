@@ -1,11 +1,18 @@
 <template src="./TheHeader.html"></template>
 <style lang="scss" scoped src="./TheHeader.scss"></style>
 <script>
+import UserNav from "~/components/UserNav/UserNav";
+
 export default {
-  name: "TheHeader",
+  name: 'TheHeader',
+  components: {
+    UserNav
+  },
   data() {
     return {
-      isShowing: false,
+      name: null,
+      showUserMenu: false, 
+      isShowing: false
     };
   },
   methods: {
@@ -15,11 +22,16 @@ export default {
       } else {
         this.isShowing = false;
       }
-    },
+    }
   },
   mounted() {
     this.checkViewSize();
-    window.addEventListener("resize", this.checkViewSize);
+    window.addEventListener('resize', this.checkViewSize);
   },
+  created() {
+    if (this.$cookies.isKey('session')) {
+      this.name = this.$cookies.get('session').user.name;
+    }
+  }
 };
 </script>

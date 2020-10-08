@@ -28,27 +28,27 @@
   }
 </static-query>
 <script>
-import ProgramsSection from "~/components/ProgramsSection/ProgramsSection";
-import PlanList from "~/components/PlanList/PlanList";
-import TestimonialsSection from "~/components/TestimonialsSection/TestimonialsSection";
-import InstructorSection from "~/components/InstructorSection/InstructorSection";
-import VueSlickCarousel from "vue-slick-carousel";
+import ProgramsSection from '~/components/ProgramsSection/ProgramsSection';
+import PlanList from '~/components/PlanList/PlanList';
+import TestimonialsSection from '~/components/TestimonialsSection/TestimonialsSection';
+import InstructorSection from '~/components/InstructorSection/InstructorSection';
+import VueSlickCarousel from 'vue-slick-carousel';
 
-import Plans from "~/data/plans.json";
+import Plans from '~/data/plans.json';
 
 export default {
-  name: "Home",
+  name: 'Home',
   metaInfo: {
     meta: [
       {
-        name: "description",
-        content: `Jesús Lezama, entrenador certificado en el IFBB (International Federationof Bodybuilding and Fitness) con 24 años de experiencia en el rubro. Capacitado en TRX Suspension Training, PilatesSuspension Method en Chile y Nueva York (USA).`,
+        name: 'description',
+        content: `Jesús Lezama, entrenador certificado en el IFBB (International Federationof Bodybuilding and Fitness) con 24 años de experiencia en el rubro. Capacitado en TRX Suspension Training, PilatesSuspension Method en Chile y Nueva York (USA).`
       },
       {
-        name: "keywords",
-        content: "Jesús Lezama, TRX Trainer, Ejercicio, Rutinas, Entranamiento",
-      },
-    ],
+        name: 'keywords',
+        content: 'Jesús Lezama, TRX Trainer, Ejercicio, Rutinas, Entranamiento'
+      }
+    ]
   },
   components: {
     ProgramsSection,
@@ -68,22 +68,26 @@ export default {
       sliders: [
         {
           title: 'Zoom training',
-          description: 'Un entrenamiento dirigido con capacidad limitada por sesión y con horarios flexibles'
+          description:
+            'Un entrenamiento dirigido con capacidad limitada por sesión y con horarios flexibles'
         },
         {
           title: 'Rutinas Online',
-          description: 'Entrena a tu ritmo y con las mejores rutinas preparadas por nosotros'
+          description:
+            'Entrena a tu ritmo y con las mejores rutinas preparadas por nosotros'
         },
         {
           title: 'Personal Training',
-          description: 'Entrenamiento personalizado adecuado a tus necesidades, en el momento que más te acomode'
+          description:
+            'Entrenamiento personalizado adecuado a tus necesidades, en el momento que más te acomode'
         },
         {
           title: 'Gimnasio + Rutinas online',
-          description: 'Entrena con nosotros en el gimnasio y obtén un acceso a nuestra plataforma online'
+          description:
+            'Entrena con nosotros en el gimnasio y obtén un acceso a nuestra plataforma online'
         }
       ]
-    }
+    };
   },
   computed: {
     plans: () => {

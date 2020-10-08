@@ -3,10 +3,10 @@
 
 <script>
 // import PlansListItem from "~/components/PlanListItem/PlanListItem";
-import VueSlickCarousel from "vue-slick-carousel";
+import VueSlickCarousel from 'vue-slick-carousel';
 
 export default {
-  name: "PlanList",
+  name: 'PlanList',
   components: {
     // PlansListItem,
     VueSlickCarousel
