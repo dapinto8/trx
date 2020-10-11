@@ -32,6 +32,7 @@ export default {
   },
   data() {
     return {
+      apiUrl: process.env.GRIDSOME_API_URL,
       settings: {
         arrows: true,
         dots: true,

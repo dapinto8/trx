@@ -10,7 +10,7 @@
           <VueSlickCarousel ref="slider" v-bind="settings" class="slider-custom">
             <div v-for="({ node }) in items" :key="node.id" class="testimonial">
               <div class="people">
-                <g-image v-if="node.photo" :src="'http://3.132.165.252:1337' + node.photo.url" :alt="node.name"></g-image>
+                <g-image v-if="node.photo" :src="apiUrl + node.photo.url" :alt="node.name"></g-image>
                 <div v-if="node.name">
                   <p class="name">{{ node.name }}</p>
                   <p class="position">{{ node.position }}</p>

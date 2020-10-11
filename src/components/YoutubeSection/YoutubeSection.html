@@ -11,7 +11,7 @@
           <a :href="node.url" target="_blank" rel="noopener noreferrer">
             <div class="background absolute left play black"></div>
             <div class="background absolute left"
-              :style="{ backgroundImage: 'url(http://3.132.165.252:1337' + node.cover.url + ')'  }">
+              :style="{ backgroundImage: 'url(' + apiUrl + node.cover.url + ')'  }">
             </div>
             <p class="YoutubeSection-video-list-item-title">
               {{ node.title }}
