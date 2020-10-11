@@ -57,7 +57,7 @@ export default {
       plans: Plans
     };
   },
-  beforeCreate() {
+  mounte() {
     if (!this.$cookies.isKey('session')) {
       this.$router.push('/');
     }

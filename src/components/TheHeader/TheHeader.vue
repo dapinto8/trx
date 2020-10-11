@@ -1,7 +1,7 @@
 <template src="./TheHeader.html"></template>
 <style lang="scss" scoped src="./TheHeader.scss"></style>
 <script>
-import UserNav from "~/components/UserNav/UserNav";
+import UserNav from '~/components/UserNav/UserNav';
 
 export default {
   name: 'TheHeader',
@@ -11,7 +11,7 @@ export default {
   data() {
     return {
       name: null,
-      showUserMenu: false, 
+      showUserMenu: false,
       isShowing: false
     };
   },
@@ -25,13 +25,12 @@ export default {
     }
   },
   mounted() {
-    this.checkViewSize();
-    window.addEventListener('resize', this.checkViewSize);
-  },
-  created() {
     if (this.$cookies.isKey('session')) {
       this.name = this.$cookies.get('session').user.name;
     }
+
+    this.checkViewSize();
+    window.addEventListener('resize', this.checkViewSize);
   }
 };
 </script>

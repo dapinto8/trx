@@ -74,13 +74,12 @@ export default {
       ]
     };
   },
-  beforeCreate() {
+  mounted() {
     if (!this.$cookies.isKey('session')) {
       this.$router.push('/');
+    } else {
+      this.name = this.$cookies.get('session').user.name;
     }
-  },
-  created() {
-    this.name = this.$cookies.get('session').user.name;
   }
 };
 </script>

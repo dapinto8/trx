@@ -57,13 +57,12 @@ export default {
       })
     }
   },
-  beforeCreate() {
+  mounted() {
     if (!this.$cookies.isKey('session')) {
       this.$router.push('/');
+    } else {
+      this.setMe();
     }
-  },
-  created() {
-    this.setMe();
-  },
+  }
 };
 </script>
