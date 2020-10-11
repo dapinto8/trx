@@ -16,10 +16,8 @@
             <label for="password">Contraseña</label>
             <input type="password" v-model="password" name="password" id="password" placeholder="Contraseña">
           </div>
-          <div>
-            <ul class="errors">
-              <li v-for="error in errors" class="error">* {{ error }}</li>
-            </ul>
+          <div class="errors">
+            <p class="error">* {{ errors[0] }}</p>
           </div>
           <button @click="submit" type="button" class="SignIn-form-button">
             Ingresar

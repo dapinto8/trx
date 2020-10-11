@@ -36,25 +36,43 @@ export default {
         weight: '',
         job: '',
         activity_level: '',
-        height: ''
-      }
-    }
+        height: '',
+        password: '',
+        confirmPassword: ''
+      },
+      pwdError: ''
+    };
   },
   methods: {
     setMe: function () {
       const { jwt } = this.$cookies.get('session');
-      getUser(jwt).then(res => {
+      getUser(jwt).then((res) => {
         this.user = res.data;
-      })
+      });
+    },
+    changePassword: function () {
+      if (this.user.password === this.user.confirmPassword) {
+        this.pwdError = '';
+        updateUser(
+          this.user.id,
+          { password: this.user.password },
+          this.$cookies.get('session').jwt
+        ).then((res) => {
+          this.user.password = '';
+          this.user.confirmPassword = '';
+        });
+      } else {
+        this.pwdError = 'Las constraseñas deben coincidir';
+      }
     },
     submit: function () {
       updateUser(
         this.user.id,
         { ...this.user },
         this.$cookies.get('session').jwt
-      ).then(res => {
+      ).then((res) => {
         this.setMe();
-      })
+      });
     }
   },
   mounted() {

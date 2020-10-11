@@ -109,13 +109,16 @@
             <div class="Profile-form-controls">
               <div class="Profile-form-control">
                 <label for="password">Nueva contraseña</label>
-                <input type="password" name="password" id="password" placeholder="">
+                <input type="password" v-model="user.password" name="password" id="password" placeholder="">
               </div>
               <div class="Profile-form-control">
                 <label for="repeatPassword">Repetir contraseña</label>
-                <input type="password" name="repeatPassword" id="repeatPassword" placeholder="">
+                <input type="password" v-model="user.confirmPassword" name="repeatPassword" id="repeatPassword" placeholder="">
               </div>
-              <button type="submit" class="Profile-form-button">
+              <div class="errors">
+                <p class="error">* {{ pwdError }}</p>
+              </div>
+              <button @click="changePassword" type="button" class="Profile-form-button">
                 Guardar
                 <g-image src="~/assets/icons/arrow-right.svg" alt="Editar" class="icon-right" />
               </button>

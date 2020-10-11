@@ -35,9 +35,9 @@
         </div>
         <div>
           <p class="success">{{ success }}</p>
-          <ul class="errors">
-            <li v-for="error in errors" class="error">* {{ error }}</li>
-          </ul>
+          <div class="errors">
+            <p class="error">* {{ errors[0] }}</p>
+          </div>
         </div>
         <button @click="submit" type="button" class="SignUp-form-button">
           Regístrate
